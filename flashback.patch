@@ -1,0 +1,18 @@
+diff -c a/usr/bin/i3-gnome-flashback-session b/usr/bin/i3-gnome-flashback-session
+*** a/usr/bin/i3-gnome-flashback-session	2020-05-09 22:47:30.000000000 -0400
+--- b/usr/bin/i3-gnome-flashback-session	2020-06-08 14:50:39.803514969 -0400
+***************
+*** 4,15 ****
+      export XDG_CURRENT_DESKTOP="Regolith:GNOME-Flashback:GNOME"
+  fi
+  
+- # gnome-session broke compatability between 19.04 (3.32.0) and 19.10 (3.34.1) versions of Ubuntu (gnome-session-bin).
+- GNOME_SESSION_BIN_VERSION=$(dpkg -s gnome-session-bin | grep '^Version:' | cut -d' ' -f 2 | cut -d'-' -f 1)
+- COMPACT_VERSION="${GNOME_SESSION_BIN_VERSION//.}"
+- 
+- if [ $COMPACT_VERSION -gt 3320 ]; then
+-     exec gnome-session --builtin --session=i3-gnome-flashback --disable-acceleration-check "$@"
+- else 
+      exec gnome-session --session=i3-gnome-flashback --disable-acceleration-check "$@"
+- fi
+--- 4,7 ----

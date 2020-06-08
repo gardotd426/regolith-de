@@ -7,7 +7,6 @@ pkgbase=regolith-de
 pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-gaps-wm-dbg i3-snapshot i3xrocks gnome-flashback ubiquity-slideshow-regolith)
          regolith-i3xrocks # allll the i3xrocks shit
 	 regolith-styles # alll the styles shit
-	 regolith-desktop # regolith-ftue
 	 regolith-st 
 	 
 
@@ -70,7 +69,7 @@ source=(https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/ayu
 	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-i3xrocks-config_3.0.21-1_amd64.deb
 	http://archive.ubuntu.com/ubuntu/pool/main/g/gnome-session/gnome-session-bin_3.36.0-2ubuntu1_amd64.deb
 	http://archive.ubuntu.com/ubuntu/pool/main/g/gnome-session/gnome-session-common_3.36.0-2ubuntu1_all.deb
-
+        flashback.patch
 
 )
 sha256sums=('SKIP'
@@ -119,6 +118,7 @@ sha256sums=('SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
+	    'SKIP'
 	    'SKIP'
 	    'SKIP'
 
@@ -180,6 +180,10 @@ package_regolith-i3 () {
     extract_deb "${srcdir}"/xrescat_1.1-1ubuntu1ppa1_amd64.deb
     extract_deb "${srcdir}"/gnome-session-bin_3.36.0-2ubuntu1_amd64.deb
     extract_deb "${srcdir}"/gnome-session-common_3.36.0-2ubuntu1_all.deb
+
+    # extra command
+    mv "${srcdir}"/flashback.patch "${pkgdir}"
+    patch "${pkgdir}"/usr/bin/i3-gnome-flashback-session -i "${pkgdir}"/flashback.patch
 
 
     move_copyright
