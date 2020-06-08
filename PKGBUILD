@@ -8,7 +8,7 @@ pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-
          regolith-i3xrocks # allll the i3xrocks shit
 	 regolith-styles # alll the styles shit
 	 regolith-st 
-	 
+	 regolith-desktop-config
 
 )
 pkgver=1.4.1
@@ -271,7 +271,7 @@ package_regolith-desktop-config () {
     rm "${pkgdir}"/usr/share/applications/reboot.desktop
     rm "${pkgdir}"/usr/share/applications/logout.desktop
     rm "${pkgdir}"/usr/share/applications/shutdown.desktop
-
+    sed -i 's/x-terminal-emulator/st/g' "${pkgdir}"/etc/regolith/i3/config
 
 }
 
