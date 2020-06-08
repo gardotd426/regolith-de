@@ -1,4 +1,5 @@
 # Author: Matt McDonald <gardotd426@gmail.com>
+# Contributor: Kevin Gilmer
 # Maintainer: Matt McDonald <gardotd426@gmail.com>
 
 
