@@ -158,7 +158,7 @@ move_copyright() {
 }
 
 package_regolith-i3 () {
-    pkgdesc="Regolith's i3-gaps"
+    pkgdesc="Regolith's i3-gaps-based DE's underpinnings and gnome foundational dependencies"
     license=('MIT')
 #    install=amdgpu-core-meta.install
     arch=('x86_64')
