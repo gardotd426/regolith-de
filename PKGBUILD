@@ -162,17 +162,16 @@ package_regolith-i3 () {
     license=('MIT')
 #    install=amdgpu-core-meta.install
     arch=('x86_64')
-    depends=('i3-gaps' 'i3-status' 'xorg-server-common' 'xorg-server-devel' 'python-i3ipc' 'gnome-flashback' 
+    depends=('i3-gaps' 'i3status' 'xorg-server-common' 'xorg-server-devel' 'python-i3ipc' 'gnome-flashback' 
              'accountsservice' 'cups-pk-helper' 'libgtop' 'gnome-control-center' 'gnome-desktop' 
-	     'x11-xwininfo' 'libdbus' 'python-gobject' 'python-dbus' 'xorg-xprop' 'libev' 'pcre'
-	     'libconfig' 'xcb-uitl-image' 'xcb-util-renderutil'
+	     'xorg-xwininfo' 'libdbus' 'python-gobject' 'python-dbus' 'xorg-xprop' 'libev' 'pcre'
+	     'libconfig' 'xcb-util-image' 'xcb-util-renderutil'
              'gnome-settings-daemon' 'playerctl')
     optdepends=('picom: For compositing/desktop effects (strongly recommended!'
 		'unclutter-xfixes-git: For unclutter')
-    provides=('i3-wm' 'i3-snapshot' 'i3-gnome-flashback' 'gnome-session' 'gnome-session-bin'
+    provides=('i3-snapshot' 'i3-gnome-flashback' 'gnome-session' 'gnome-session-bin'
 	      'gnome-session-common')
-    conflicts=('i3-wm' 'i3-gaps' 'i3-gaps-git' 'i3-gaps-rounded-git' 'i3-gaps-next-git'
-               'i3-gnome-flashback' 'gnome-session')
+    conflicts=('i3-gnome-flashback' 'gnome-session')
 
     extract_deb "${srcdir}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
     extract_deb "${srcdir}"/regolith-gnome-flashback_2.4.14-1_amd64.deb
