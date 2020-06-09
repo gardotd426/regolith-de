@@ -14,4 +14,3 @@ IF THIS MESSAGE IS STILL PRESENT, IT IS NOT READY FOR PRIME-TIME. EITHER DON'T T
 Credit to Kevin Gilmer @kgilmer for the creation of Regolith Linux as well as invaluable insight during the creation of this PKGBUILD. 
 Pull requests are welcome, the number of packages here is enormous (it is a full desktop environment, after all), and this is my first software/package management project of any kind. 
 
-Much credit also to Avinash Duduskar, for already many contributions. 
