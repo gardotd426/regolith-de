@@ -14,58 +14,61 @@ pkgver=1.4.1
 pkgrel=1
 arch=('x86_64')
 url=https://github.com/regolith-linux/regolith-desktop
+url2=https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files
+url3=https://launchpad.net/~regolith-linux/+archive/ubuntu/unstable/+files
+url4=http://archive.ubuntu.com/ubuntu/pool/main/g/gnome-session/
 license=('custom: multiple')
 groups=('regolith-de')
 makedepends=('wget')
 
-source=(https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/cahuella_1.0.2-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks_1.3.2_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/nordic_1.6.5-1ubuntu1ppa1_all.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/plymouth-theme-regolith_1.0.0-1_all.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-compositor-compton-glx_1.0.6_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/unstable/+files/regolith-default-settings_1.0.1-1focal1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-desktop_2.63-1focal1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-ftue_1.0.10-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-gdm3-theme_2.0.0-1ubuntu1~ppa1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-gnome-flashback_2.4.14-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-i3-gaps-config_2.4.13-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-lightdm-config_1.0.6-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-look-ayu_2.4.22-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-look-ayu-dark_2.4.22-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-look-ayu-mirage_2.4.22-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-look-cahuella_2.4.22-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-look-lascaille_2.4.22-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-look-nord_2.4.22-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-look-solarized-dark_2.4.22-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-look-ubuntu_2.4.22-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-rofication_1.2.2-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-rofi-config_1.2.5-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-st_0.8.2-1ubuntu20ppa5_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-styles_2.4.22-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-system_1.4.0.3-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/solarc-theme_800c997-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/xrescat_1.1-1ubuntu1ppa1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-battery_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-cpu-usage_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-focused-window-name_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-keyboard-layout_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-key-indicator_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-media-player_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-memory_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-net-traffic_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-nm-vpn_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-openvpn_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-temp_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-time_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-volume_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-weather_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-wifi_3.0.21-1_amd64.deb
-	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-i3xrocks-config_3.0.21-1_amd64.deb
-	http://archive.ubuntu.com/ubuntu/pool/main/g/gnome-session/gnome-session-bin_3.36.0-2ubuntu1_amd64.deb
-	http://archive.ubuntu.com/ubuntu/pool/main/g/gnome-session/gnome-session-common_3.36.0-2ubuntu1_all.deb
+source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
+	"${url2}"/cahuella_1.0.2-1_amd64.deb
+        "${url2}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
+	"${url2}"/i3xrocks_1.3.2_amd64.deb
+	"${url2}"/nordic_1.6.5-1ubuntu1ppa1_all.deb
+	"${url2}"/plymouth-theme-regolith_1.0.0-1_all.deb
+	"${url2}"/regolith-compositor-compton-glx_1.0.6_amd64.deb
+	"${url3}"/regolith-default-settings_1.0.1-1focal1_amd64.deb
+	"${url2}"/regolith-desktop_2.63-1focal1_amd64.deb
+	"${url2}"/regolith-ftue_1.0.10-1_amd64.deb
+	"${url2}"/regolith-gdm3-theme_2.0.0-1ubuntu1~ppa1_amd64.deb
+	"${url2}"/regolith-gnome-flashback_2.4.14-1_amd64.deb
+	"${url2}"/regolith-i3-gaps-config_2.4.13-1_amd64.deb
+	"${url2}"/regolith-lightdm-config_1.0.6-1_amd64.deb
+	"${url2}"/regolith-look-ayu_2.4.22-1_amd64.deb
+	"${url2}"/regolith-look-ayu-dark_2.4.22-1_amd64.deb
+	"${url2}"/regolith-look-ayu-mirage_2.4.22-1_amd64.deb
+	"${url2}"/regolith-look-cahuella_2.4.22-1_amd64.deb
+	"${url2}"/regolith-look-lascaille_2.4.22-1_amd64.deb
+	"${url2}"/regolith-look-nord_2.4.22-1_amd64.deb
+	"${url2}"/regolith-look-solarized-dark_2.4.22-1_amd64.deb
+	"${url2}"/regolith-look-ubuntu_2.4.22-1_amd64.deb
+	"${url2}"/regolith-rofication_1.2.2-1_amd64.deb
+	"${url2}"/regolith-rofi-config_1.2.5-1_amd64.deb
+	"${url2}"/regolith-st_0.8.2-1ubuntu20ppa5_amd64.deb
+	"${url2}"/regolith-styles_2.4.22-1_amd64.deb
+	"${url2}"/regolith-system_1.4.0.3-1_amd64.deb
+	"${url2}"/solarc-theme_800c997-1_amd64.deb
+	"${url2}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
+	"${url2}"/xrescat_1.1-1ubuntu1ppa1_amd64.deb
+	"${url2}"/i3xrocks-battery_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-cpu-usage_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-focused-window-name_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-keyboard-layout_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-key-indicator_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-media-player_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-memory_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-net-traffic_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-nm-vpn_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-openvpn_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-temp_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-time_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-volume_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-weather_3.0.21-1_amd64.deb
+	"${url2}"/i3xrocks-wifi_3.0.21-1_amd64.deb
+	"${url2}"/regolith-i3xrocks-config_3.0.21-1_amd64.deb
+	"${url4}"/gnome-session-bin_3.36.0-2ubuntu1_amd64.deb
+	"${url4}"/gnome-session-common_3.36.0-2ubuntu1_all.deb
     flashback.patch)
 sha256sums=('cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818'
             '22bbf4aaf1870963befffae41bfe7c2a0c8b674b4b0d15554a68b80a5f2429e3'
