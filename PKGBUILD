@@ -132,7 +132,7 @@ extract_deb() {
     tar -C "${pkgdir}" -xf data.tar.xz
 }
 # move ubuntu specific /usr/lib/x86_64-linux-gnu to /usr/lib
-# $1: debian package library dir (goes from opt/amdgpu or opt/amdgpu-pro and from x86_64 or i386)
+# $1: debian package library dir 
 # $2: arch package library dir (goes to usr/lib or usr/lib32)
 move_libdir() {
     local deb_libdir="$1"
@@ -159,9 +159,10 @@ package_regolith-i3 () {
     license=('MIT')
 #    install=amdgpu-core-meta.install
     arch=('x86_64')
-    depends=('i3-gaps' 'i3-status' 'xorg' 'xorg-apps' 'python-i3ipc' 'gnome-flashback' 
+    depends=('i3-gaps' 'i3status' 'xorg-server-common' 'xorg-server-devel' 'xorg-xwininfo' 'python-i3ipc' 'gnome-flashback' 
              'accountsservice' 'cups-pk-helper' 'libgtop' 'gnome-control-center' 'gnome-desktop' 
-	     'gnome-settings-daemon' 'playerctl')
+	     'xorg-xev' 'xorg-xwininfo' 'libxdamage' 'pcre' 'libconfig'
+             'gnome-settings-daemon' 'playerctl')
     optdepends=('picom: For compositing/desktop effects (strongly recommended!'
 		'unclutter-xfixes-git: For unclutter')
     provides=('i3-wm' 'i3-snapshot' 'i3-gnome-flashback' 'gnome-session' 'gnome-session-bin'
