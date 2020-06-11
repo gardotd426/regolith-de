@@ -169,7 +169,7 @@ package_regolith-i3 () {
 	     'gnome-settings-daemon' 'playerctl')
     optdepends=('picom: For compositing/desktop effects (strongly recommended!'
 		'unclutter-xfixes-git: For unclutter')
-    provides=('i3-snapshot' 'i3-gnome-flashback' 'gnome-session' 'gnome-session-bin'
+    provides=('i3-snapshot' 'i3-gnome-flashback' 'gnome-session-bin'
 	      'gnome-session-common')
     conflicts=('i3-gnome-flashback' 'gnome-session')
 
