@@ -169,10 +169,9 @@ package_regolith-i3 () {
 	     'gnome-settings-daemon' 'playerctl')
     optdepends=('picom: For compositing/desktop effects (strongly recommended!'
 		'unclutter-xfixes-git: For unclutter')
-    provides=('i3-wm' 'i3-snapshot' 'i3-gnome-flashback' 'gnome-session' 'gnome-session-bin'
+    provides=('i3-snapshot' 'i3-gnome-flashback' 'gnome-session' 'gnome-session-bin'
 	      'gnome-session-common')
-    conflicts=('i3-wm' 'i3-gaps' 'i3-gaps-git' 'i3-gaps-rounded-git' 'i3-gaps-next-git'
-               'i3-gnome-flashback' 'gnome-session')
+    conflicts=('i3-gnome-flashback' 'gnome-session')
 
     extract_deb "${srcdir}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
     extract_deb "${srcdir}"/regolith-gnome-flashback_2.4.14-1_amd64.deb
