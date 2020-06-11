@@ -67,8 +67,6 @@ source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
 	"${url2}"/i3xrocks-weather_3.0.21-1_amd64.deb
 	"${url2}"/i3xrocks-wifi_3.0.21-1_amd64.deb
 	"${url2}"/regolith-i3xrocks-config_3.0.21-1_amd64.deb
-	"${url4}"/gnome-session-bin_3.36.0-2ubuntu1_amd64.deb
-	"${url4}"/gnome-session-common_3.36.0-2ubuntu1_all.deb
         flashback.patch
         flashback2.patch)
 sha256sums=('cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818'
@@ -117,8 +115,6 @@ sha256sums=('cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818'
             '7407c769165126b5010aae37d865dca69dd27a9421700dd8c7d631c2423cac18'
             '9e4467ceccbd3e56966926a38de1833d5e390599d09e2c3e45c57db27353602b'
             '354ec982e6fe94241c4925921c8c7abef9d9e1697b4533e8c70d1d4cb0cfa0b0'
-            '05d7f0057a0b324d625261ddf4b84e7bf1935b58e5fa4e43b13e995eda145b61'
-            'a8250895f80d50f43cf16e15531b47f0e79986880106323098c09db43cd1f143'
             'fa7b230613d9c286ee549a57cc528701f8d0869846cc98bb580b60c435fa563a'
             'SKIP')
 
@@ -167,19 +163,16 @@ package_regolith-i3 () {
     depends=('i3-gaps' 'i3status' 'xorg-server-common' 'xorg-server-devel' 'python-i3ipc' 'gnome-flashback' 
              'accountsservice' 'cups-pk-helper' 'libgtop' 'gnome-control-center' 'gnome-desktop' 
 	     'xorg-xwininfo' 'dbus' 'python-gobject' 'python-dbus' 'xorg-xprop' 'libev' 'pcre'
-	     'libconfig' 'xcb-util-image' 'xcb-util-renderutil' 'libsigc++'
+	     'libconfig' 'xcb-util-image' 'xcb-util-renderutil' 'libsigc++' 'gnome-session'
              'gnome-settings-daemon' 'playerctl')
     optdepends=('picom: For compositing/desktop effects (strongly recommended!'
 		'unclutter-xfixes-git: For unclutter')
-    provides=('i3-snapshot' 'i3-gnome-flashback' 'gnome-session' 'gnome-session-bin'
-	      'gnome-session-common')
-    conflicts=('i3-gnome-flashback' 'gnome-session')
+    provides=('i3-snapshot' 'i3-gnome-flashback')
+    conflicts=('i3-gnome-flashback')
 
     extract_deb "${srcdir}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
     extract_deb "${srcdir}"/regolith-gnome-flashback_2.4.14-1_amd64.deb
     extract_deb "${srcdir}"/xrescat_1.1-1ubuntu1ppa1_amd64.deb
-    extract_deb "${srcdir}"/gnome-session-bin_3.36.0-2ubuntu1_amd64.deb
-    extract_deb "${srcdir}"/gnome-session-common_3.36.0-2ubuntu1_all.deb
 
     # extra command
     patch "${pkgdir}"/usr/bin/i3-gnome-flashback-session -i "${srcdir}"/flashback.patch
