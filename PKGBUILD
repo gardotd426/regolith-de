@@ -167,7 +167,7 @@ package_regolith-i3 () {
     depends=('i3-gaps' 'i3status' 'xorg-server-common' 'xorg-server-devel' 'python-i3ipc' 'gnome-flashback' 
              'accountsservice' 'cups-pk-helper' 'libgtop' 'gnome-control-center' 'gnome-desktop' 
 	     'xorg-xwininfo' 'dbus' 'python-gobject' 'python-dbus' 'xorg-xprop' 'libev' 'pcre'
-	     'libconfig' 'xcb-util-image' 'xcb-util-renderutil'
+	     'libconfig' 'xcb-util-image' 'xcb-util-renderutil' 'libsigc++'
              'gnome-settings-daemon' 'playerctl')
     optdepends=('picom: For compositing/desktop effects (strongly recommended!'
 		'unclutter-xfixes-git: For unclutter')
