@@ -164,7 +164,7 @@ package_regolith-i3 () {
     license=('MIT')
 #    install=amdgpu-core-meta.install
     arch=('x86_64')
-    depends=('i3-gaps' 'i3-status' 'xorg-init' 'python-i3ipc' 'gnome-flashback' 
+    depends=('i3-gaps' 'i3status' 'xorg-xinit' 'python-i3ipc' 'gnome-flashback' 
              'accountsservice' 'cups-pk-helper' 'libgtop' 'gnome-control-center' 'gnome-desktop' 
 	     'gnome-settings-daemon' 'playerctl')
     optdepends=('picom: For compositing/desktop effects (strongly recommended!'
