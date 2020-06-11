@@ -192,7 +192,7 @@ package_regolith-i3xrocks () {
     pkgdesc="Regolith's i3xrocks with associated widgets and config files"
     license=('GPLv3')
     arch=('x86_64')
-    depends=('glibc' 'accountsservice')
+    depends=('glibc' 'accountsservice' 'alsa-utils' 'bc' 'ttf-font-awesome')
     conflicts=('i3xrocks' 'i3blocks')
     provides=('i3xrocks' 'i3blocks')
 
