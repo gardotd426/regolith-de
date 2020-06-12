@@ -68,7 +68,8 @@ source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
 	"${url2}"/i3xrocks-wifi_3.0.21-1_amd64.deb
 	"${url2}"/regolith-i3xrocks-config_3.0.21-1_amd64.deb
         flashback.patch
-        flashback2.patch)
+        flashback2.patch
+        https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-gdm3-theme_2.0.0-1ubuntu1~ppa1_amd64.deb)
 sha256sums=('cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818'
             '22bbf4aaf1870963befffae41bfe7c2a0c8b674b4b0d15554a68b80a5f2429e3'
             '2c4060dda3ee2d3b4fc587d35a8e9c9e6e8e7cc63edf72cf1e17322b1700d902'
@@ -116,6 +117,7 @@ sha256sums=('cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818'
             '9e4467ceccbd3e56966926a38de1833d5e390599d09e2c3e45c57db27353602b'
             '354ec982e6fe94241c4925921c8c7abef9d9e1697b4533e8c70d1d4cb0cfa0b0'
             'fa7b230613d9c286ee549a57cc528701f8d0869846cc98bb580b60c435fa563a'
+            'SKIP'
             'SKIP')
 
 
@@ -160,20 +162,20 @@ package_regolith-i3 () {
     license=('MIT')
 #    install=amdgpu-core-meta.install
     arch=('x86_64')
-    depends=('i3-gaps' 'i3status' 'xorg-server-common' 'xorg-server-devel' 'python-i3ipc' 'gnome-flashback' 
+    depends=('i3-gaps-rounded-git' 'i3status' 'xorg-server-common' 'xorg-server-devel' 'python-i3ipc' 'gnome-flashback' 
              'accountsservice' 'cups-pk-helper' 'libgtop' 'gnome-control-center' 'gnome-desktop' 
 	     'xorg-xwininfo' 'dbus' 'python-gobject' 'python-dbus' 'xorg-xprop' 'libev' 'pcre'
 	     'libconfig' 'xcb-util-image' 'xcb-util-renderutil' 'libsigc++' 'gnome-session'
              'gnome-settings-daemon' 'playerctl')
     optdepends=('picom: For compositing/desktop effects (strongly recommended!'
 		'unclutter-xfixes-git: For unclutter')
-    provides=('i3-snapshot' 'i3-gnome-flashback')
-    conflicts=('i3-gnome-flashback')
+    provides=('i3-snapshot')
+    conflicts=('gnome-shell' 'gdm' 'i3-gnome-flashback')
 
     extract_deb "${srcdir}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
     extract_deb "${srcdir}"/regolith-gnome-flashback_2.4.14-1_amd64.deb
     extract_deb "${srcdir}"/xrescat_1.1-1ubuntu1ppa1_amd64.deb
-
+    
     # extra command
     patch "${pkgdir}"/usr/bin/i3-gnome-flashback-session -i "${srcdir}"/flashback.patch
     patch "${pkgdir}"/usr/bin/i3-gnome-flashback -i "${srcdir}"/flashback2.patch
@@ -186,8 +188,8 @@ package_regolith-i3xrocks () {
     license=('GPLv3')
     arch=('x86_64')
     depends=('glibc' 'accountsservice' 'alsa-utils' 'bc' 'ttf-font-awesome')
-    conflicts=('i3xrocks' 'i3blocks')
-    provides=('i3xrocks' 'i3blocks')
+    conflicts=('i3xrocks')
+    provides=('i3xrocks')
 
     extract_deb "${srcdir}"/i3xrocks_1.3.2_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-battery_3.0.21-1_amd64.deb
@@ -255,6 +257,8 @@ package_regolith-desktop-config () {
     extract_deb "${srcdir}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
     extract_deb "${srcdir}"/regolith-i3xrocks-config_3.0.21-1_amd64.deb
     extract_deb "${srcdir}"/regolith-rofication_1.2.2-1_amd64.deb    
+    extract_deb "${srcdir}"/regolith-gdm3-theme_2.0.0-1ubuntu1~ppa1_amd64.deb
+
     move_copyright
 ## extra commands
     mv "${pkgdir}"/usr/lib/python3 "${pkgdir}"/usr/lib/python3.8
