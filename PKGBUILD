@@ -257,7 +257,6 @@ package_regolith-desktop-config () {
     extract_deb "${srcdir}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
     extract_deb "${srcdir}"/regolith-i3xrocks-config_3.0.21-1_amd64.deb
     extract_deb "${srcdir}"/regolith-rofication_1.2.2-1_amd64.deb    
-    extract_deb "${srcdir}"/regolith-gdm3-theme_2.0.0-1ubuntu1~ppa1_amd64.deb
 
     move_copyright
 ## extra commands
