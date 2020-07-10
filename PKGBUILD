@@ -135,7 +135,7 @@ extract_deb() {
     tar -C "${pkgdir}" -xf data.tar.xz
 }
 # move ubuntu specific /usr/lib/x86_64-linux-gnu to /usr/lib
-# $1: debian package library dir (goes from opt/amdgpu or opt/amdgpu-pro and from x86_64 or i386)
+# $1: debian package library dir (from x86_64 or i386)
 # $2: arch package library dir (goes to usr/lib or usr/lib32)
 move_libdir() {
     local deb_libdir="$1"
@@ -160,7 +160,6 @@ move_copyright() {
 package_regolith-i3 () {
     pkgdesc="Regolith's i3-gaps-based DE's underpinnings and gnome foundational dependencies"
     license=('MIT')
-#    install=amdgpu-core-meta.install
     arch=('x86_64')
     depends=('i3-gaps' 'i3status' 'xorg-server-common' 'xorg-server-devel' 'xcb-util-keysyms'  'xcb-util-wm'  'libev'  
              'yajl'  'startup-notification'  'pango'  'perl' 'xorg-server'
