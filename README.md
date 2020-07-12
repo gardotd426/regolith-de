@@ -36,8 +36,14 @@ If you would like to test this PKGBUILD, the first steps would be to try it out 
     ```
     $ makepkg -si
     ```
+5. Install optional dependencies
 
-5. Start Regolith Desktop Environment
+    Until this PKGBUILD is live it isn't possible to include dependencies from the AUR. These will need to be installed manually while in testing.
+
+    [Install the following from the AUR](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_and_upgrading_packages) :
+    - [remontoire-git](https://aur.archlinux.org/packages/remontoire-git/) - For the help overlay
+
+6. Start Regolith Desktop Environment
 
     One way to do this is to run the session from a manual xorg startup:
 
