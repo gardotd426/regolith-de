@@ -10,7 +10,7 @@ pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-
         regolith-styles # alll the styles shit
         regolith-st 
         regolith-desktop-config)
-pkgver=1.4.1
+pkgver=0.1.0
 pkgrel=1
 arch=('x86_64')
 url=https://github.com/regolith-linux/regolith-desktop
@@ -168,8 +168,9 @@ package_regolith-i3 () {
 	     'xorg-xwininfo' 'dbus' 'python-gobject' 'python-dbus' 'xorg-xprop' 'libev' 'pcre'
 	     'libconfig' 'xcb-util-image' 'xcb-util-renderutil' 'libsigc++' 'gnome-session'
              'gnome-settings-daemon' 'playerctl')
-    optdepends=('picom: For compositing/desktop effects (strongly recommended!'
-		'unclutter-xfixes-git: For unclutter')
+    optdepends=('picom: For compositing/desktop effects - strongly recommended!'
+		'unclutter-xfixes-git: For unclutter'
+		'lightdm: Display Manager - Regolith LightDM theme included in regolith-desktop-config' )
     provides=('i3-snapshot')
     conflicts=('gnome-shell' 'gdm' 'i3-gnome-flashback')
 
@@ -180,6 +181,18 @@ package_regolith-i3 () {
     # extra command
     patch "${pkgdir}"/usr/bin/i3-gnome-flashback-session -i "${srcdir}"/flashback.patch
     patch "${pkgdir}"/usr/bin/i3-gnome-flashback -i "${srcdir}"/flashback2.patch
+
+    move_copyright
+}
+
+package_i3-snapshot () {
+    pkdesc="Save and restore window and workspace layout within an i3wm instance. Alternative to i3-save-tree from Regolith Linux"
+    license=('BSD-3-Clause')
+    arch=('x86_64')
+    depends=('i3' 'jsoncpp' 'libsigc++')
+    provides=('i3-snapshot')
+
+    extract_deb "${srcdir}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
 
     move_copyright
 }
@@ -215,7 +228,7 @@ package_regolith-i3xrocks () {
 
 package_regolith-styles () {
     pkgdesc="Regolith's themes for i3, gdm, gtk, rofi, plymouth, etc."
-    license=('custom: FIXME')
+    license=('custom: GPLv3')
 # FIXME    depends=("rofi" "regolith-i3" "gdm" "gtk3")
 
     extract_deb "${srcdir}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
@@ -239,7 +252,7 @@ package_regolith-styles () {
 
 package_regolith-desktop-config () {
     pkgdesc="Regolith DE's desktop settings and configuration files, for rofi, i3, lightdm, i3xrocks, etc. plus ubiquity-slideshow-regolith"
-    license=('custom: FIXME')
+    license=('Custom')
     provides=('regolith-ftue' 'regolith-rofication')
     depends=('rofi')
     optdepends=('lightdm: For the Regolith LightDM customization' 
@@ -274,7 +287,7 @@ package_regolith-desktop-config () {
 
 package_regolith-st () {
 	pkgdesc="Regolith's fork of st - the simple terminal"
-	license=("custom: FIXME")
+	license=("MIT")
 	provides=('st')
 	conflicts=('st')
 
