@@ -248,6 +248,7 @@ package_regolith-styles () {
     extract_deb "${srcdir}"/solarc-theme_800c997-1_amd64.deb
 
     move_copyright
+    cp "${pkgdir}"/etc/regolith/styles/ayu/typeface "${pkgdir}"/etc/regolith/styles/lascaille/typeface
 }
 
 package_regolith-desktop-config () {
