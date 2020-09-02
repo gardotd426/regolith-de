@@ -54,7 +54,6 @@ source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
 	"${url2}"/i3xrocks-battery_3.0.21-1_amd64.deb
 	"${url2}"/i3xrocks-cpu-usage_3.0.21-1_amd64.deb
 	"${url2}"/i3xrocks-focused-window-name_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-keyboard-layout_3.0.21-1_amd64.deb
 	"${url2}"/i3xrocks-key-indicator_3.0.21-1_amd64.deb
 	"${url2}"/i3xrocks-media-player_3.0.21-1_amd64.deb
 	"${url2}"/i3xrocks-memory_3.0.21-1_amd64.deb
@@ -209,7 +208,6 @@ package_regolith-i3xrocks () {
     extract_deb "${srcdir}"/i3xrocks-battery_3.0.21-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-cpu-usage_3.0.21-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-focused-window-name_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-keyboard-layout_3.0.21-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-key-indicator_3.0.21-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-media-player_3.0.21-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-memory_3.0.21-1_amd64.deb
