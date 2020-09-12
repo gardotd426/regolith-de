@@ -253,7 +253,7 @@ package_regolith-desktop-config () {
     pkgdesc="Regolith DE's desktop settings and configuration files, for rofi, i3, lightdm, i3xrocks, etc. plus ubiquity-slideshow-regolith"
     license=('Custom')
     provides=('regolith-ftue' 'regolith-rofication')
-    depends=('rofi')
+    depends=('rofi' 'adobe-source-code-pro-fonts')
     optdepends=('lightdm: For the Regolith LightDM customization' 
 		'regolith-i3xrocks: For i3xrocks (i3blocks) support'
 	        'i3-gaps: For i3-gaps config support'
