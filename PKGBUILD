@@ -11,30 +11,31 @@ pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-
         regolith-st 
         regolith-desktop-config)
 pkgver=0.1.0
-pkgrel=1
+pkgrel=2
 arch=('x86_64')
 url=https://github.com/regolith-linux/regolith-desktop
 url2=https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files
 url3=https://launchpad.net/~regolith-linux/+archive/ubuntu/unstable/+files
 url4=http://archive.ubuntu.com/ubuntu/pool/main/g/gnome-session/
+url5=https://launchpad.net/~regolith-linux/+archive/ubuntu/stable/+files
 license=('custom: multiple')
 groups=('regolith-de')
 makedepends=('wget')
 
-source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
-	"${url2}"/cahuella_1.0.2-1_amd64.deb
-        "${url2}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
-	"${url2}"/i3xrocks_1.3.2_amd64.deb
-	"${url2}"/nordic_1.6.5-1ubuntu1ppa1_all.deb
-	"${url2}"/plymouth-theme-regolith_1.0.0-1_all.deb
-	"${url2}"/regolith-compositor-compton-glx_1.0.6_amd64.deb
+source=("${url5}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
+	"${url5}"/cahuella_1.0.2-1_amd64.deb
+        "${url5}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
+	"${url5}"/i3xrocks_1.3.4-1_amd64.deb
+	"${url5}"/nordic_1.6.5-1ubuntu1ppa1_all.deb
+	"${url5}"/plymouth-theme-regolith_1.0.3-1_all.deb
+	"${url5}"/regolith-compositor-compton-glx_1.0.10-1_amd64.deb
 	"${url3}"/regolith-default-settings_1.0.1-1focal1_amd64.deb
-	"${url2}"/regolith-desktop_2.63-1focal1_amd64.deb
-	"${url2}"/regolith-ftue_1.0.10-1_amd64.deb
-	"${url2}"/regolith-gdm3-theme_2.0.0-1ubuntu1~ppa1_amd64.deb
-	"${url2}"/regolith-gnome-flashback_2.4.14-1_amd64.deb
-	"${url2}"/regolith-i3-gaps-config_2.4.13-1_amd64.deb
-	"${url2}"/regolith-lightdm-config_1.0.6-1_amd64.deb
+	"${url5}"/regolith-desktop_2.63-1focal1_amd64.deb
+	"${url5}"/regolith-ftue_1.0.10-1_amd64.deb
+	"${url5}"/regolith-gdm3-theme_2.0.0-1ubuntu1~ppa1_amd64.deb
+	"${url5}"/regolith-gnome-flashback_2.4.14-1_amd64.deb
+	"${url5}"/regolith-i3-gaps-config_2.5.0-1_amd64.deb
+	"${url5}"/regolith-lightdm-config_1.0.6-1_amd64.deb
 	"${url2}"/regolith-look-ayu_2.4.22-1_amd64.deb
 	"${url2}"/regolith-look-ayu-dark_2.4.22-1_amd64.deb
 	"${url2}"/regolith-look-ayu-mirage_2.4.22-1_amd64.deb
@@ -43,45 +44,46 @@ source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
 	"${url2}"/regolith-look-nord_2.4.22-1_amd64.deb
 	"${url2}"/regolith-look-solarized-dark_2.4.22-1_amd64.deb
 	"${url2}"/regolith-look-ubuntu_2.4.22-1_amd64.deb
-	"${url2}"/regolith-rofication_1.2.2-1_amd64.deb
-	"${url2}"/regolith-rofi-config_1.2.5-1_amd64.deb
-	"${url2}"/regolith-st_0.8.2-1ubuntu20ppa5_amd64.deb
-	"${url2}"/regolith-styles_2.4.22-1_amd64.deb
-	"${url2}"/regolith-system_1.4.0.3-1_amd64.deb
-	"${url2}"/solarc-theme_800c997-1_amd64.deb
-	"${url2}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
-	"${url2}"/xrescat_1.1-1ubuntu1ppa1_amd64.deb
-	"${url2}"/i3xrocks-battery_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-cpu-usage_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-focused-window-name_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-key-indicator_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-media-player_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-memory_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-net-traffic_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-nm-vpn_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-openvpn_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-temp_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-time_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-volume_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-weather_3.0.21-1_amd64.deb
-	"${url2}"/i3xrocks-wifi_3.0.21-1_amd64.deb
-	"${url2}"/regolith-i3xrocks-config_3.0.21-1_amd64.deb
+	"${url5}"/regolith-rofication_1.2.2-1_amd64.deb
+	"${url5}"/regolith-rofi-config_1.2.6-1_amd64.deb
+	"${url5}"/regolith-st_0.8.2-1ubuntu20ppa5_amd64.deb
+	"${url5}"/regolith-styles_2.4.24-1_amd64.deb
+	"${url5}"/regolith-system_1.4.0.3-1_amd64.deb
+	"${url5}"/solarc-theme_800c997-1_amd64.deb
+	"${url5}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
+	"${url5}"/xrescat_1.1-1ubuntu1ppa1_amd64.deb
+	"${url5}"/i3xrocks-battery_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-cpu-usage_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-focused-window-name_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-key-indicator_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-media-player_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-memory_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-net-traffic_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-nm-vpn_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-openvpn_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-temp_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-time_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-volume_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-weather_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-wifi_3.1.0-1_amd64.deb
+	"${url5}"/i3xrocks-info_3.1.0-1_amd64.deb
+	"${url5}"/regolith-i3xrocks-config_3.1.0-1_amd64.deb
         flashback.patch
-        flashback2.patch
-        https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-gdm3-theme_2.0.0-1ubuntu1~ppa1_amd64.deb)
+        flashback2.patch)
+
 sha256sums=('cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818'
             '22bbf4aaf1870963befffae41bfe7c2a0c8b674b4b0d15554a68b80a5f2429e3'
             '2c4060dda3ee2d3b4fc587d35a8e9c9e6e8e7cc63edf72cf1e17322b1700d902'
-            'c24204be51fcaa06ee5f621c8564d08b944ea9e13eb0dbe6a530f8cfb01baea7'
+            '9fda771a69323114150a5ac95f588fe94934e5106d950037056507fc9bfc24c0'    # i3xrocks
             '05c66c372d378d2992ec59be553bd7de1cf0574d61313d84274f1e64bfe23d3b'
-            '70124968b0ee701bd6c6c71d5c6f4c4e417a984924c47e3007a58db59478a612'
-            '95b9821f515005ffa7361c96b98a1e87fd2f5057b32acc8d70647f78ca00e010'
+            'f9fabeb0442eb849a8e95163c20fbf9b40f288af0812583b270120e4d8092608'    # plymouth-theme-regolith
+            'c17619b9405a0fbf8a6626bf0cfde7631bee457f9d9af82b2099d3833a71f35c'    # regolith-compositor-compton-glx
             '2722c4fdac1e120d2dda9e309ac85fed583e6eb738efe3cf3cbf389288aa5138'
             '09201968ab0bcc63a46110e006680f1cbd807fdd4fce16d4b4eba34115bac941'
             '8f2c3d7168440644b1e426e61948dda758a9a7f7040c1dd3ee7d41b306f624dd'
             '82050c4f1a95faeb4fd34eada50028f855527ffeda4277a7563a050e81f5cd02'
             'a5dfec5bf96a24778364c03b1143fe20f835bafb269ec0efe59841bc461f0f7c'
-            'b31a1d5d534d00b484cb4523a2c66ca5b6a95e2cbae54a6b896e8f1d39e15edc'
+            'f279ba8d320f2197d9692e53142f60355f519afdb3d724ccbe8d720615de4618'    # regolith-i3-gaps-config
             'e6808d545b806da2e97a848c7d169a7062879482f8e165776156094e0823e552'
             '34323f51e63cac850262dc2d1ae44583c6678c1303e0faf4b5eb341cb953c1f2'
             'f10f62cb431b1b8f70c706052a556dc2ff9801ecc0df0fadac292229ef87378e'
@@ -92,31 +94,31 @@ sha256sums=('cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818'
             '2d3707829ba24f60af0d7310b0f95a79ec6eb28f7eb3224b3a7419b35dc70858'
             'ab7f7e25566327afc15baa23990ae0d5522132645a9f6331504f1d01eeff174e'
             '636366aad3a4635e3df5ecc69bafa2f176d7f2c09fa9a472825dbb508119bf96'
-            'b2a5d6c1ad5543a710b5dd4f2e468b773f81d6083407ad999890a91e322aecc6'
+            '7e390253850eb2f7fd3bcf1638c5e2c005a524be58a743d57ce14194f0eb78ee'    # regolith-rofi-config
             '900c285972a9969b4d2d8bcd67dabccb817a2a77a102251d5dc1b2e254f095c8'
-            '9895a1388d8bb4bc6cd6cac47d198a18f46e54b3aa0ef330d5b622272e3a1fef'
-            'be2d3143a741b183f69f97fc719034e24e5f77d7e210b890db1ddf416335c267'
-            'e37fd4c1397178271479b6fb59bcb30b623c89ce13ae0d0f8ad158118ed5b763'
-            'b84219798b644e97a473f99f9deef9e1985be1608fdbed794755dde80b694795'
-            '9c641ad29504864ed08cd67f34583e72f67143a784ee058f37ec703e0b823ad0'
-            '68274851019f8ca0af50b63ef729474b3ecbb2eb8cce8569e8f74860748af8ab'
-            '3749782c560ff5c624ec195a597cd5a64c68badf53081c940708a8b481aa1b8d'
-            'e8ef64f2ad1f0afffd48dc700aad6caddcb50962a93a81669c6da5bc9c4cfffd'
-            '629f5b4b17ffc611f257b7e4d519c4656edb68647415b7235ece46b5604a7df5'
-            '095b71e35cb6246d9319fc5de9ba51fab6884f2d80d4ecf953511c7e34d8f5a4'
-            '688503ca68dea74c238e8074d992d19cf3254d4e7cc36a84edf2fa53ce75aad8'
-            '6724d147ab404430a455cc70bce0a1779e19564d5df9e0aa3ab8e703cfe73efd'
-            '46b677a3e8a691e6f01e1a70ee68456cdcb11d3e7969a5c04608b1bd4fa4042e'
-            'c447ceaf4d5e1e7c8d4ecfa8be95a227773b89b2f4d690aa606fe16a1fa68352'
-            '78cf91272eefa7f33b9b49be3d373be132e080871c3bbb4405d3290fd7a61d52'
-            '450db023d14a61fa444bdf3fd7f5edd0041066d8a9515944f38b8d7d5cf432a0'
-            '1afb47e0c2fdd3b00a435233da5e611e241f9d6d49ee613c236b62ed791099a8'
-            '7407c769165126b5010aae37d865dca69dd27a9421700dd8c7d631c2423cac18'
-            '9e4467ceccbd3e56966926a38de1833d5e390599d09e2c3e45c57db27353602b'
-            '354ec982e6fe94241c4925921c8c7abef9d9e1697b4533e8c70d1d4cb0cfa0b0'
-            'fa7b230613d9c286ee549a57cc528701f8d0869846cc98bb580b60c435fa563a'
-            'SKIP'
-            'SKIP')
+            '4b5479da8f81650965660f01470703cc52110d7b29b68d6b6db8d1427a7a4cc7'    # regolith-styles
+            'be2d3143a741b183f69f97fc719034e24e5f77d7e210b890db1ddf416335c267'    # 
+            'e37fd4c1397178271479b6fb59bcb30b623c89ce13ae0d0f8ad158118ed5b763'    # 
+            'b84219798b644e97a473f99f9deef9e1985be1608fdbed794755dde80b694795'    # 
+            '9c641ad29504864ed08cd67f34583e72f67143a784ee058f37ec703e0b823ad0'    # xrescat
+            'e889377bb341c84d8f695e88cf315621f3bad68f33aebb637c6e3fad88bc0fb2'    # i3xrocks-battery
+            '4d41500a2ed6f24b188b814138b8a3fff663c29f1fb9ed24607affdb2d8acddd'    # i3xrocks-cpu-usage
+            'b3226129555a1c445c90765c9929b6f32e14e45094551e231d3ab5430618996e'    # i3xrocks-focused-window-name
+            '62356ea32008c94de74047515afc4d623bb6bc6c9f186402160ea9c528ec46e5'    # i3xrocks-key-indicator
+            '77e98869776f6628d3b04aaba78b8eb9ca507ec8082ae6979686f78cee9e26b1'    # i3xrocks-media-player
+            '41d2dfe6063f8488b7b695fa377ca82e2b4c78e1d4203bf29a5e9382d3be523f'    # i3xrocks-memory
+            '46cac7cfa1bf953232d578447f65d3be8fe5582935daec77ccdfe1b7abce13f8'    # i3xrocks-net-traffic
+            '3d1affdda45aff0ee1ba163c640c2861ed214fa93f608b2fea5981dc4eac96dc'    # i3xrocks-nm-vpn
+            'f51450f23b53cadb5805c44f66cf30354d290b42289a4a49a0522d1d607c1401'    # i3xrocks-openvpn
+            'bdbfa199c54f4a664967dee06adb58b31540ec24d4490904c85354cac35f5591'    # i3xrocks-temp
+            '94a30ba50bb52637671b7eb05a20f47dccdb687fc94a66e7d5c92d2816c7aaa2'    # i3xrocks-time
+            '065b0dbc19d2dc5539c5a1e5296982a5833d155af78d97289c2f26c584c2cafb'    # i3xrocks-volume
+            'e4435949ba1410cc3b1a165584da425d1a549a16b4e048bc6c645fa31f845729'    # i3xrocks-weather
+            'ded21170d8e0fa88bb421139188cd97edc24f2ff2d74df35af077c43375c074e'    # i3xrocks-wifi
+            '74b54a5415a4bdd2aa08ed239f2a69e28be3e9808c174df4dcc60031ccad1a4c'    # i3xrocks-info
+            '40bc5ac9894fd087c814de21ca02c16f506c55351f16d98baee66cdcd608a5be'    # regolith-i3xrocks-config
+            'fa7b230613d9c286ee549a57cc528701f8d0869846cc98bb580b60c435fa563a'    # flashback.patch
+            'fb8d508bbfcb0adc70c7a8d16f649eb03d3dfce505ef9289db1ad939605a9649')   # flashback2.patch
 
 
 PKGEXT=".pkg.tar"
@@ -203,21 +205,21 @@ package_regolith-i3xrocks () {
     conflicts=('i3xrocks')
     provides=('i3xrocks')
 
-    extract_deb "${srcdir}"/i3xrocks_1.3.2_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-battery_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-cpu-usage_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-focused-window-name_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-key-indicator_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-media-player_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-memory_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-net-traffic_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-nm-vpn_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-openvpn_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-temp_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-time_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-volume_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-weather_3.0.21-1_amd64.deb
-    extract_deb "${srcdir}"/i3xrocks-wifi_3.0.21-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks_1.3.4-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-battery_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-cpu-usage_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-focused-window-name_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-key-indicator_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-media-player_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-memory_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-net-traffic_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-nm-vpn_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-openvpn_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-temp_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-time_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-volume_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-weather_3.1.0-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-wifi_3.1.0-1_amd64.deb
 
     move_copyright
 }
@@ -231,7 +233,7 @@ package_regolith-styles () {
     extract_deb "${srcdir}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
     extract_deb "${srcdir}"/cahuella_1.0.2-1_amd64.deb
     extract_deb "${srcdir}"/nordic_1.6.5-1ubuntu1ppa1_all.deb
-    extract_deb "${srcdir}"/plymouth-theme-regolith_1.0.0-1_all.deb
+    extract_deb "${srcdir}"/plymouth-theme-regolith_1.0.3-1_all.deb
     extract_deb "${srcdir}"/regolith-gdm3-theme_2.0.0-1ubuntu1~ppa1_amd64.deb
     extract_deb "${srcdir}"/regolith-look-ayu_2.4.22-1_amd64.deb
     extract_deb "${srcdir}"/regolith-look-ayu-dark_2.4.22-1_amd64.deb
@@ -241,7 +243,7 @@ package_regolith-styles () {
     extract_deb "${srcdir}"/regolith-look-nord_2.4.22-1_amd64.deb
     extract_deb "${srcdir}"/regolith-look-solarized-dark_2.4.22-1_amd64.deb
     extract_deb "${srcdir}"/regolith-look-ubuntu_2.4.22-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-styles_2.4.22-1_amd64.deb
+    extract_deb "${srcdir}"/regolith-styles_2.4.24-1_amd64.deb
     extract_deb "${srcdir}"/solarc-theme_800c997-1_amd64.deb
 
     move_copyright
@@ -258,16 +260,16 @@ package_regolith-desktop-config () {
 	        'i3-gaps: For i3-gaps config support'
 		'picom: For compositing configuration')
 
-    extract_deb "${srcdir}"/regolith-compositor-compton-glx_1.0.6_amd64.deb
+    extract_deb "${srcdir}"/regolith-compositor-compton-glx_1.0.10-1_amd64.deb
     extract_deb "${srcdir}"/regolith-default-settings_1.0.1-1focal1_amd64.deb
     extract_deb "${srcdir}"/regolith-desktop_2.63-1focal1_amd64.deb
     extract_deb "${srcdir}"/regolith-ftue_1.0.10-1_amd64.deb
     extract_deb "${srcdir}"/regolith-lightdm-config_1.0.6-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-i3-gaps-config_2.4.13-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-rofi-config_1.2.5-1_amd64.deb
+    extract_deb "${srcdir}"/regolith-i3-gaps-config_2.5.0-1_amd64.deb
+    extract_deb "${srcdir}"/regolith-rofi-config_1.2.6-1_amd64.deb
     extract_deb "${srcdir}"/regolith-system_1.4.0.3-1_amd64.deb
     extract_deb "${srcdir}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
-    extract_deb "${srcdir}"/regolith-i3xrocks-config_3.0.21-1_amd64.deb
+    extract_deb "${srcdir}"/regolith-i3xrocks-config_3.1.0-1_amd64.deb
     extract_deb "${srcdir}"/regolith-rofication_1.2.2-1_amd64.deb    
 
     move_copyright
