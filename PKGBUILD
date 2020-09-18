@@ -67,8 +67,9 @@ source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
 	"${url2}"/i3xrocks-wifi_3.0.21-1_amd64.deb
 	"${url2}"/regolith-i3xrocks-config_3.0.21-1_amd64.deb
         flashback.patch
-        flashback2.patch
-        https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-gdm3-theme_2.0.0-1ubuntu1~ppa1_amd64.deb)
+        flashback2.patch)
+
+
 sha256sums=('cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818'
             '22bbf4aaf1870963befffae41bfe7c2a0c8b674b4b0d15554a68b80a5f2429e3'
             '2c4060dda3ee2d3b4fc587d35a8e9c9e6e8e7cc63edf72cf1e17322b1700d902'
@@ -115,7 +116,6 @@ sha256sums=('cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818'
             '9e4467ceccbd3e56966926a38de1833d5e390599d09e2c3e45c57db27353602b'
             '354ec982e6fe94241c4925921c8c7abef9d9e1697b4533e8c70d1d4cb0cfa0b0'
             'fa7b230613d9c286ee549a57cc528701f8d0869846cc98bb580b60c435fa563a'
-            'SKIP'
             'SKIP')
 
 
