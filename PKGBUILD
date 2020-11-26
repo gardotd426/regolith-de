@@ -248,6 +248,7 @@ package_regolith-styles () {
 
     move_copyright
     cp "${pkgdir}"/etc/regolith/styles/ayu/typeface "${pkgdir}"/etc/regolith/styles/lascaille/typeface
+    cp "${pkgdir}"/etc/regolith/styles/ayu/typeface "${pkgdir}"/etc/regolith/styles/cahuella/typeface
 }
 
 package_regolith-desktop-config () {
