@@ -36,20 +36,21 @@ source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
 	"${url2}"/regolith-gnome-flashback_2.6.2-1_amd64.deb
 	"${url2}"/regolith-i3-gaps-config_2.8.0-1_amd64.deb
 	"${url2}"/regolith-lightdm-config_1.0.6-1_amd64.deb
-	"${url2}"/regolith-look-ayu_2.4.22-1_amd64.deb
-	"${url2}"/regolith-look-ayu-dark_2.4.22-1_amd64.deb
-	"${url2}"/regolith-look-ayu-mirage_2.4.22-1_amd64.deb
-	"${url2}"/regolith-look-cahuella_2.4.22-1_amd64.deb
-	"${url2}"/regolith-look-lascaille_2.4.22-1_amd64.deb
-	"${url2}"/regolith-look-nord_2.4.22-1_amd64.deb
-	"${url2}"/regolith-look-solarized-dark_2.4.22-1_amd64.deb
-	"${url2}"/regolith-look-ubuntu_2.4.22-1_amd64.deb
-	"${url5}"/regolith-rofication_1.2.2-1_amd64.deb
-	"${url5}"/regolith-rofi-config_1.2.6-1_amd64.deb
+	"${url2}"/regolith-look-ayu_2.6.13-1ubuntu2_amd64.deb
+	"${url2}"/regolith-look-ayu-dark_2.6.13-1ubuntu2_amd64.deb
+	"${url2}"/regolith-look-ayu-mirage_2.6.13-1ubuntu2_amd64.deb
+	"${url2}"/regolith-look-cahuella_2.6.13-1ubuntu2_amd64.deb
+	"${url2}"/regolith-look-lascaille_2.6.13-1ubuntu2_amd64.deb
+	"${url2}"/regolith-look-nord_2.6.13-1ubuntu2_amd64.deb
+	"${url2}"/regolith-look-solarized-dark_2.6.13-1ubuntu2_amd64.deb
+	"${url2}"/regolith-look-ubuntu_2.6.13-1ubuntu2_amd64.deb
+        "${url2}"/regolith-look-pop-os_2.6.13-1ubuntu2_amd64.deb
+	"${url2}"/regolith-rofication_1.2.3-1_amd64.deb
+	"${url2}"/regolith-rofi-config_1.3.1-1_amd64.deb
 	"${url5}"/regolith-st_0.8.2-1ubuntu20ppa5_amd64.deb
-	"${url5}"/regolith-styles_2.4.24-1_amd64.deb
-	"${url5}"/regolith-system_1.4.0.3-1_amd64.deb
-	"${url5}"/solarc-theme_800c997-1_amd64.deb
+	"${url2}"/regolith-styles_2.6.13-1ubuntu2_amd64.deb
+	"${url2}"/regolith-system_1.4.0.4-1_amd64.deb
+	"${url2}"/solarc-theme_800c997-1_amd64.deb
 	"${url5}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
 	"${url5}"/xrescat_1.1-1ubuntu1ppa1_amd64.deb
 	"${url5}"/i3xrocks-battery_3.2.6-1ubuntu2_amd64.deb
@@ -133,6 +134,7 @@ sha256sums=('SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
+	    'SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
@@ -223,7 +225,7 @@ package_regolith-i3 () {
 		'unclutter-xfixes-git: For unclutter'
 		'lightdm: Display Manager - Regolith LightDM theme included in regolith-desktop-config' )
     provides=('i3-snapshot')
-    conflicts=('gnome-shell' 'gdm' 'i3-gnome-flashback')
+    conflicts=()
 
     extract_deb "${srcdir}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
     extract_deb "${srcdir}"/regolith-gnome-flashback_2.6.2-1_amd64.deb
@@ -286,15 +288,16 @@ package_regolith-styles () {
     extract_deb "${srcdir}"/nordic_1.6.5-1ubuntu1ppa1_all.deb
     extract_deb "${srcdir}"/plymouth-theme-regolith_1.0.3-1_all.deb
     extract_deb "${srcdir}"/regolith-gdm3-theme_2.0.0-1ubuntu1~ppa1_amd64.deb
-    extract_deb "${srcdir}"/regolith-look-ayu_2.4.22-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-look-ayu-dark_2.4.22-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-look-ayu-mirage_2.4.22-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-look-cahuella_2.4.22-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-look-lascaille_2.4.22-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-look-nord_2.4.22-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-look-solarized-dark_2.4.22-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-look-ubuntu_2.4.22-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-styles_2.4.24-1_amd64.deb
+    extract_deb "${srcdir}"/regolith-look-ayu_2.6.13-1ubuntu2_amd64.deb
+    extract_deb "${srcdir}"/regolith-look-ayu-dark_2.6.13-1ubuntu2_amd64.deb
+    extract_deb "${srcdir}"/regolith-look-ayu-mirage_2.6.13-1ubuntu2_amd64.deb
+    extract_deb "${srcdir}"/regolith-look-cahuella_2.6.13-1ubuntu2_amd64.deb
+    extract_deb "${srcdir}"/regolith-look-lascaille_2.6.13-1ubuntu2_amd64.deb
+    extract_deb "${srcdir}"/regolith-look-nord_2.6.13-1ubuntu2_amd64.deb
+    extract_deb "${srcdir}"/regolith-look-solarized-dark_2.6.13-1ubuntu2_amd64.deb
+    extract_deb "${srcdir}"/regolith-look-ubuntu_2.6.13-1ubuntu2_amd64.deb
+    extract_deb "${srcdir}"/regolith-look-pop-os_2.6.13-1ubuntu2_amd64.deb
+    extract_deb "${srcdir}"/regolith-styles_2.6.13-1ubuntu2_amd64.deb
     extract_deb "${srcdir}"/solarc-theme_800c997-1_amd64.deb
 
     move_copyright
@@ -312,17 +315,17 @@ package_regolith-desktop-config () {
 	        'i3-gaps: For i3-gaps config support'
 		'picom: For compositing configuration')
 
-    extract_deb "${srcdir}"/regolith-compositor-compton-glx_1.0.10-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-default-settings_1.0.1-1focal1_amd64.deb
-    extract_deb "${srcdir}"/regolith-desktop_2.63-1focal1_amd64.deb
-    extract_deb "${srcdir}"/regolith-ftue_1.0.10-1_amd64.deb
+    extract_deb "${srcdir}"/regolith-compositor-picom-glx_1.1.1-1_amd64.deb
+    extract_deb "${srcdir}"/regolith-default-settings_1.0.2-1groovy_amd64.deb
+    extract_deb "${srcdir}"/regolith-desktop-complete_2.92-1groovy_amd64.deb
+    extract_deb "${srcdir}"/regolith-ftue_1.0.11-1_amd64.deb
     extract_deb "${srcdir}"/regolith-lightdm-config_1.0.6-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-i3-gaps-config_2.5.0-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-rofi-config_1.2.6-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-system_1.4.0.3-1_amd64.deb
+    extract_deb "${srcdir}"/regolith-i3-gaps-config_2.8.0-1_amd64.deb
+    extract_deb "${srcdir}"/regolith-rofi-config_1.3.1-1_amd64.deb
+    extract_deb "${srcdir}"/regolith-system_1.4.0.4-1_amd64.deb
     extract_deb "${srcdir}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
     extract_deb "${srcdir}"/regolith-i3xrocks-config_3.2.6-1ubuntu2_amd64.deb
-    extract_deb "${srcdir}"/regolith-rofication_1.2.2-1_amd64.deb    
+    extract_deb "${srcdir}"/regolith-rofication_1.2.3-1_amd64.deb    
 
     move_copyright
 ## extra commands
