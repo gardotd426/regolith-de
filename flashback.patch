@@ -1,5 +1,5 @@
---- a/usr/bin/regolith-session	2020-06-03 10:15:36.000000000 -0400
-+++ b/usr/bin/regolith-session	2020-12-06 05:28:27.760491090 -0500
+--- regolith-session	2020-06-03 10:15:36.000000000 -0400
++++ regolith-new	2020-12-17 17:09:06.708590002 -0500
 @@ -4,12 +4,4 @@
      export XDG_CURRENT_DESKTOP="Regolith:GNOME-Flashback:GNOME"
  fi
@@ -9,7 +9,7 @@
 -COMPACT_VERSION="${GNOME_SESSION_BIN_VERSION//.}"
 -
 -if [ $COMPACT_VERSION -gt 3320 ]; then
--    exec gnome-session --builtin --session=regolith --disable-acceleration-check "$@"
+     exec gnome-session --builtin --session=regolith --disable-acceleration-check "$@"
 -else
-     exec gnome-session --session=regolith --disable-acceleration-check "$@"
+-    exec gnome-session --session=regolith --disable-acceleration-check "$@"
 -fi
