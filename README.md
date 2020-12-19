@@ -1,4 +1,7 @@
 # regolith-de
+
+file:///home/matt/Pictures/regolith1.png
+
 Standalone Regolith desktop environment for Arch Linux
 
 This is a PKGBUILD for Regolith Linux's fork of the i3 (plus Gnome-flashback) window manager/desktop environment, to rather hackily rip the desktop environment for Regolith Linux and make it work on Arch Linux and it's derivatives. 
@@ -57,11 +60,22 @@ If you would like to test this PKGBUILD, the first steps would be to try it out 
     $ startx
     ```
 
+## Looks/Styles
+
+    Regolith has a pretty cool (IMO) way of styles/theming, and I've kept all that intact. 
+    
+ - You can run `regolith-look` to get a list of commands, but basically, `regolith-look stage` will do the initial setup of copying the regolith and Xresouces files to your user directory (in their own, independent locations, so they will NOT overwrite ~/.Xresources or ~/.config/i3/config, they will go in ~/.Xresources-regolith and ~/.config/regolith/i3/config). 
+    
+ - To set your look, run `regolith look set <stylename>`, from the list of style directories in /etc/regolith/styles, such as cahuella, lascaille (the default), ayu, ayu-dark, pop-os, ubuntu, etc.
+ 
+ - `regolith-look refresh` will refresh it for your current session, changing the terminal theme, i3xrocks theme, and wallpaper (for the styles that have their own wallpaper). It's pretty simple. 
+
 Note: VMs generally don't play well with picom/compton compositing. If you have any issues with performance, make sure to kill the compositor.
 
 IF THIS MESSAGE IS STILL PRESENT, IT IS NOT READY FOR PRIMETIME. EITHER DON'T TRY IT AT ALL, OR TRY AT YOUR OWN RISK. THERE IS NO WARRANTY.
 
-When I and anyone else working on this decide that it's ready, we will make it available in the AUR. 
+When I decide that it's ready (hopefully with plenty of input), I will make it available in the AUR. 
+
 
 ## Credits
 
