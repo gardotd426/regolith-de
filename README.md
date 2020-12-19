@@ -1,5 +1,7 @@
 # regolith-de
 
+https://github.com/gardotd426/regolith-de/blob/master/regolith1.png?raw=true
+
 Standalone Regolith desktop environment for Arch Linux
 
 This is a PKGBUILD for Regolith Linux's fork of the i3 (plus Gnome-flashback) window manager/desktop environment, to rather hackily rip the desktop environment for Regolith Linux and make it work on Arch Linux and it's derivatives. 
