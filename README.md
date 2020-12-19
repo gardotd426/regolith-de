@@ -50,7 +50,7 @@ If you would like to test this PKGBUILD, the first steps would be to try it out 
     ```
     $ sudo pacman -Sy xorg-xinit
 
-    $ echo 'exec i3-gnome-flashback-session' > ${HOME}/.xinitrc
+    $ echo 'exec regolith-session' > ${HOME}/.xinitrc
 
     $ startx
     ```
