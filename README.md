@@ -45,7 +45,9 @@ If you would like to test this PKGBUILD, the first steps would be to try it out 
 
 6. Start Regolith Desktop Environment
 
-    One way to do this is to run the session from a manual xorg startup:
+    The best way obviously is through a display manager (DM). It definitely works with LightDM and SDDM, it should also work with GDM. Just select "Regolith" from the list of desktop environments.
+
+    The other way is of course to run the session from a manual xorg startup:
 
     ```
     $ sudo pacman -Sy xorg-xinit
