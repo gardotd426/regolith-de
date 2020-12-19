@@ -69,8 +69,8 @@ source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
 	"${url5}"/i3xrocks-wifi_3.2.6-1ubuntu2_amd64.deb
 	"${url5}"/i3xrocks-info_3.2.6-1ubuntu2_amd64.deb
 	"${url2}"/regolith-i3xrocks-config_3.2.6-1ubuntu2_amd64.deb
-        flashback.patch)
-        #flashback2.patch)
+        flashback.patch
+	i3-config.patch)
 
 #sha256sums=('cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818'
 #            '22bbf4aaf1870963befffae41bfe7c2a0c8b674b4b0d15554a68b80a5f2429e3'
@@ -168,7 +168,7 @@ sha256sums=('SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
-#            'SKIP'
+            'SKIP'
             'SKIP')
 
 
@@ -336,6 +336,7 @@ package_regolith-desktop-config () {
     rm "${pkgdir}"/usr/share/applications/logout.desktop
     rm "${pkgdir}"/usr/share/applications/shutdown.desktop
     sed -i 's/x-terminal-emulator/st/g' "${pkgdir}"/etc/regolith/i3/config
+    patch "${pkgdir}"/etc/regolith/i3/config -i "${srcdir}"/i3-config.patch
 
 }
 
