@@ -1,6 +1,6 @@
 # regolith-de
 
-https://github.com/gardotd426/regolith-de/blob/master/regolith1.png?raw=true
+![Screenshot](regolith1.png)
 
 Standalone Regolith desktop environment for Arch Linux
 
