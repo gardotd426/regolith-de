@@ -66,7 +66,7 @@ If you would like to test this PKGBUILD, the first steps would be to try it out 
     
  - You can run `regolith-look` to get a list of commands, but basically, `regolith-look stage` will do the initial setup of copying the regolith and Xresouces files to your user directory (in their own, independent locations, so they will NOT overwrite ~/.Xresources or ~/.config/i3/config, they will go in ~/.Xresources-regolith and ~/.config/regolith/i3/config). 
     
- - To set your look, run `regolith look set <stylename>`, from the list of style directories in /etc/regolith/styles, such as cahuella, lascaille (the default), ayu, ayu-dark, pop-os, ubuntu, etc.
+ - To set your look, run `regolith look set <stylename>`, from the list of style directories in /etc/regolith/styles (also can be retrieved with `regolith-look list`), such as cahuella, lascaille (the default), ayu, ayu-dark, pop-os, ubuntu, etc.
  
  - `regolith-look refresh` will refresh it for your current session, changing the terminal theme, i3xrocks theme, and wallpaper (for the styles that have their own wallpaper). It's pretty simple. 
 
