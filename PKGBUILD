@@ -70,7 +70,10 @@ source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
         "${url5}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
         "${url5}"/xrescat_1.1-1ubuntu1ppa1_amd64.deb
         flashback.patch
-	i3-config.patch)
+	i3-config.patch
+        regolith-look.patch
+	net-traffic.patch
+)
 
 
 sha256sums=(cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818
@@ -122,6 +125,8 @@ sha256sums=(cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818
             9c641ad29504864ed08cd67f34583e72f67143a784ee058f37ec703e0b823ad0
 	    63082efb191f31c3bc4be28f7118aa38e53b0d18b4366cbdc275a628b36876ce
 	    06d1ff06149838a473191d71bd5d98f91e00ec60cdb4ee994d69f083a1233810
+	    ad7d324de0652fa63ee6165113a1a6ce7699a79f2db7c61d9503803c9c8807f3
+	    6e4c31bf1d7016cff0aa73effda3b579f674d5350c122cfa27c3aeeb19df2ae5
 )
 
 
@@ -227,7 +232,9 @@ package_regolith-i3xrocks () {
     extract_deb "${srcdir}"/i3xrocks-weather_3.2.6-1ubuntu2_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-wifi_3.2.6-1ubuntu2_amd64.deb
 
+    patch "${pkgdir}"/usr/share/i3xrocks/net-traffic -i "${srcdir}"/net-traffic.patch
     move_copyright
+
 }
 
 
@@ -256,6 +263,7 @@ package_regolith-styles () {
     move_copyright
     cp "${pkgdir}"/etc/regolith/styles/ayu/typeface "${pkgdir}"/etc/regolith/styles/lascaille/typeface
     cp "${pkgdir}"/etc/regolith/styles/ayu/typeface "${pkgdir}"/etc/regolith/styles/cahuella/typeface
+    patch "${pkgdir}"/usr/bin/regolith-look -i "${srcdir}"/regolith-look.patch
 }
 
 package_regolith-desktop-config () {

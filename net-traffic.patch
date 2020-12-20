@@ -1,0 +1,44 @@
+--- a/usr/share/i3xrocks/net-traffic	2020-12-20 04:42:27.110317704 -0500
++++ b/usr/share/i3xrocks/net-traffic	2020-12-20 04:42:14.934247793 -0500
+@@ -30,17 +30,6 @@
+ BPS=false
+ ULEV=2
+ 
+-# Handle button event
+-if [ "x${BUTTON}" == "x1" ] ; then
+-  if [ "$INT_TYPE" == "W" ]; then
+-    ACTION=$(xrescat i3xrocks.action.net-traffic.left "/usr/bin/gnome-control-center --class=floating_window wifi")
+-    /usr/bin/i3-msg -q exec "$ACTION"
+-  else
+-    ACTION=$(xrescat i3xrocks.action.net-traffic.right "/usr/bin/gnome-control-center --class=floating_window network")
+-    /usr/bin/i3-msg -q exec "$ACTION"
+-  fi
+-fi
+-
+ # determine the net interface name
+ IF=$(ip route get 1.1.1.1 | grep -Po '(?<=dev\s)\w+' | cut -f1 -d ' ')
+   IF="${BLOCK_INSTANCE:-${IF}}"
+@@ -59,6 +48,23 @@
+     ;;
+ esac
+ 
++# Handle button event
++if [ "x${BUTTON}" == "x1" ] ; then
++  if [ "$INT_TYPE" == "W" ]; then
++    ACTION=$(xrescat i3xrocks.action.net-traffic.left "/usr/bin/gnome-control-center --class=floating_window wifi")
++    /usr/bin/i3-msg -q exec "$ACTION"
++  else
++    ACTION=$(xrescat i3xrocks.action.net-traffic.right "/usr/bin/gnome-control-center --class=floating_window network")
++    /usr/bin/i3-msg -q exec "$ACTION"
++  fi
++fi
++
++# determine the net interface name
++IF=$(ip route get 1.1.1.1 | grep -Po '(?<=dev\s)\w+' | cut -f1 -d ' ')
++  IF="${BLOCK_INSTANCE:-${IF}}"
++
++    [ "$IF" = "" ] && exit
++
+ # get arguments
+ while getopts i:a:u:e:t:U:D:lhvb option
+ do
