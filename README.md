@@ -62,7 +62,7 @@ If you would like to test this PKGBUILD, the first steps would be to try it out 
 
 ## Looks/Styles
 
-    Regolith has a pretty cool (IMO) way of styles/theming, and I've kept all that intact. 
+   Regolith has a pretty cool (IMO) way of styles/theming, and I've kept all that intact. 
     
  - You can run `regolith-look` to get a list of commands, but basically, `regolith-look stage` will do the initial setup of copying the regolith and Xresouces files to your user directory (in their own, independent locations, so they will NOT overwrite ~/.Xresources or ~/.config/i3/config, they will go in ~/.Xresources-regolith and ~/.config/regolith/i3/config). 
     
