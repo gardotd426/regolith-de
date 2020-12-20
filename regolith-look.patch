@@ -1,0 +1,11 @@
+--- a/usr/bin/regolith-look	2020-12-20 00:25:00.100295787 -0500
++++ b/usr/bin/regolith-look	2020-12-20 00:32:37.706885851 -0500
+@@ -57,7 +57,7 @@
+     fi
+ 
+     UPDATE_TERM_FLAG=$(xrescat gnome.terminal.update true)
+-    if [[ "$UPDATE_TERM_FLAG" == "true" && -f "/usr/bin/create-regolith-term-profile" ]] ; then
++    if [[ "$UPDATE_TERM_FLAG" == "true" && -f "/usr/bin/create-regolith-term-profile" && -f "/usr/bin/gnome-terminal" ]] ; then
+         /usr/bin/create-regolith-term-profile
+     fi
+ 
