@@ -10,7 +10,7 @@ pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-
         regolith-styles # alll the styles shit
         regolith-st 
         regolith-desktop-config)
-pkgver=0.1.0
+pkgver=1.5
 pkgrel=2
 arch=('x86_64')
 url=https://github.com/regolith-linux/regolith-desktop
@@ -26,21 +26,21 @@ source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
         "${url2}"/cahuella_1.0.2-1_amd64.deb
         "${url2}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
         "${url2}"/i3xrocks_1.3.4-1_amd64.deb
-        "${url5}"/i3xrocks-battery_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-cpu-usage_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-focused-window-name_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-info_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-key-indicator_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-media-player_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-memory_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-net-traffic_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-nm-vpn_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-openvpn_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-temp_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-time_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-volume_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-weather_3.2.6-1ubuntu2_amd64.deb
-        "${url5}"/i3xrocks-wifi_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-battery_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-cpu-usage_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-focused-window-name_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-info_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-key-indicator_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-media-player_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-memory_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-net-traffic_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-nm-vpn_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-openvpn_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-temp_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-time_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-volume_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-weather_3.2.6-1ubuntu2_amd64.deb
+        "${url2}"/i3xrocks-wifi_3.2.6-1ubuntu2_amd64.deb
         "${url2}"/nordic_1.6.5-1ubuntu1ppa1_all.deb
         "${url2}"/plymouth-theme-regolith_1.0.3-1_all.deb
         "${url2}"/regolith-compositor-picom-glx_1.1.1-1_amd64.deb
@@ -67,8 +67,8 @@ source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
         "${url2}"/regolith-styles_2.6.13-1ubuntu2_amd64.deb
         "${url2}"/regolith-system_1.4.0.4-1_amd64.deb
         "${url2}"/solarc-theme_800c997-1_amd64.deb
-        "${url5}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
-        "${url5}"/xrescat_1.1-1ubuntu1ppa1_amd64.deb
+        "${url2}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
+        "${url2}"/xrescat_1.2.1-1_amd64.deb
         flashback.patch
 	i3-config.patch
         regolith-look.patch
@@ -122,10 +122,10 @@ sha256sums=(cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818
             aab85154a0311982161cfb43c5708ed5f69aee0bcb0916e95c41a97efb5465e0
             e37fd4c1397178271479b6fb59bcb30b623c89ce13ae0d0f8ad158118ed5b763
             b84219798b644e97a473f99f9deef9e1985be1608fdbed794755dde80b694795
-            9c641ad29504864ed08cd67f34583e72f67143a784ee058f37ec703e0b823ad0
+            ae1b03ac0d10e6f5de8ac40670caf3204f2f38f2a3a3a3d29182a2fd5740edce
 	    63082efb191f31c3bc4be28f7118aa38e53b0d18b4366cbdc275a628b36876ce
 	    06d1ff06149838a473191d71bd5d98f91e00ec60cdb4ee994d69f083a1233810
-	    ad7d324de0652fa63ee6165113a1a6ce7699a79f2db7c61d9503803c9c8807f3
+	    9b54d06c17b57186353a70e28c4c57eddc4ee2ca9540c62185ebcf4bac9f28e1
 	    6e4c31bf1d7016cff0aa73effda3b579f674d5350c122cfa27c3aeeb19df2ae5
 )
 
@@ -182,16 +182,15 @@ package_regolith-i3 () {
     optdepends=('picom: For compositing/desktop effects - strongly recommended!'
 		'unclutter-xfixes-git: For unclutter'
 		'lightdm: Display Manager - Regolith LightDM theme included in regolith-desktop-config' )
-    provides=('i3-snapshot')
+    provides=('i3-snapshot' 'xrescat' 'regolith-gnome-flashback')
     conflicts=()
 
     extract_deb "${srcdir}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
     extract_deb "${srcdir}"/regolith-gnome-flashback_2.6.2-1_amd64.deb
-    extract_deb "${srcdir}"/xrescat_1.1-1ubuntu1ppa1_amd64.deb
+    extract_deb "${srcdir}"/xrescat_1.2.1-1_amd64.deb
     
     # extra command
     patch "${pkgdir}"/usr/bin/regolith-session -i "${srcdir}"/flashback.patch
-#    patch "${pkgdir}"/usr/bin/i3-gnome-flashback -i "${srcdir}"/flashback2.patch
 
     move_copyright
 }
