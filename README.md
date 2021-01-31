@@ -4,15 +4,15 @@
 
 Standalone Regolith desktop environment for Arch Linux
 
-This is a PKGBUILD for Regolith Linux's fork of the i3 (plus Gnome-flashback) window manager/desktop environment, to rather hackily rip the desktop environment for Regolith Linux and make it work on Arch Linux and it's derivatives. 
+This is a PKGBUILD for Regolith Linux's fork of the i3 (plus Gnome-flashback) window manager/desktop environment, to rather hackily rip the desktop environment for Regolith Linux and make it work on Arch Linux and it's derivatives.
 
 I will check weekly for upstream updates to the launchpad packages, which is honestly probably way more often than necessary - Regolith is based on Ubuntu after all, and so it doesn't update its DE packages at the same rate as we're used to on Arch. 
 
 Where possible (more accurately, where I've found possible), Arch/AUR packages will be used if compatible versions exist. Currently Arch's i3-gaps, rofi, and some other packages are being used.
 
-Because of the way AUR packages work, combined with Ubuntu-specific idiosyncracies in the original config file for Regolith's i3, I've had to bundle the regolith build of st - the simple terminal, and use that as the default terminal. Feel free to change it in the config file (`/etc/regolith/i3/config`) just like you would with regular i3, it's just the only other option was for there to be no default terminal, or else try and choose one that some people will have and others won't. I get around this by just including the terminal, and luckily it's st so it's really small. It's its own package, so you can also remove it (`sudo pacman -R regolith-st`), it's not a dependency of anything, it just gets installed with the meta-package. 
+Because of the way AUR packages work, combined with Ubuntu-specific idiosyncracies in the original config file for Regolith's i3, I've had to bundle the regolith build of st - the simple terminal, and use that as the default terminal. Feel free to change it in the config file (`/etc/regolith/i3/config`) just like you would with regular i3, it's just the only other option was for there to be no default terminal, or else try and choose one that some people will have and others won't. I get around this by just including the terminal, and luckily it's st so it's really small. It's its own package, so you can also remove it (`sudo pacman -R regolith-st`), it's not a dependency of anything, it just gets installed with the meta-package.
 
-As of the latest update to Regolith proper, it seems that my package no longer conflicts with gnome-shell or GDM. If you have any issues let me know. 
+As of the latest update to Regolith proper, it seems that my package no longer conflicts with gnome-shell or GDM. If you have any issues let me know.
 
 ## Contributing
 
@@ -59,20 +59,23 @@ PRs are welcome.
 This will build and install regolith-i3, regolith-i3xrocks, regolith-desktop-config, regolith-st, and regolith-styles, the five packages that make up the entire desktop environment (along with their dependencies). 
 ## Looks/Styles
 
-   Regolith has a pretty cool (IMO) way of styles/theming, and I've kept all that intact. 
-    
- - You can run `regolith-look` to get a list of commands, but basically, `regolith-look stage` will do the initial setup of copying the regolith and Xresouces files to your user directory (in their own, independent locations, so they will NOT overwrite ~/.Xresources or ~/.config/i3/config, they will go in ~/.Xresources-regolith and ~/.config/regolith/i3/config). 
-    
+   Regolith has a pretty cool (IMO) way of styles/theming, and I've kept all that intact.
+
+ - You can run `regolith-look` to get a list of commands, but basically, `regolith-look stage` will do the initial setup of copying the regolith and Xresouces files to your user directory (in their own, independent locations, so they will NOT overwrite ~/.Xresources or ~/.config/i3/config, they will go in ~/.Xresources-regolith and ~/.config/regolith/i3/config).
+
  - To set your look, run `regolith look set <stylename>`, from the list of style directories in /etc/regolith/styles (also can be retrieved with `regolith-look list`), such as cahuella, lascaille (the default), ayu, ayu-dark, pop-os, ubuntu, etc.
- 
- - `regolith-look refresh` will refresh it for your current session, changing the terminal theme, i3xrocks theme, and wallpaper (for the styles that have their own wallpaper). It's pretty simple. 
+
+ - `regolith-look refresh` will refresh it for your current session, changing the terminal theme, i3xrocks theme, and wallpaper (for the styles that have their own wallpaper). It's pretty simple.
 
 Note: VMs generally don't play well with picom/compton compositing. If you are running Regolith in a VM and have any issues with performance, make sure to kill the compositor.
 
+## Refreshing the PKGBUILD
+
+The repo contains a Python script you can use to refresh packages versions in the PKGBUILD. You will need [pdm](https://pdm.fming.dev/) - `pdm sync` will install dependencies. Run `./pull-upstream.py --help` for all the details.
 
 ## Credits
 
-Credit to Kevin Gilmer @kgilmer for the creation of Regolith Linux as well as invaluable insight during the creation of this PKGBUILD. 
-Pull requests are welcome, the number of packages here is enormous (it is a full desktop environment, after all), and this is my first software/package management project of any kind. 
+Credit to Kevin Gilmer @kgilmer for the creation of Regolith Linux as well as invaluable insight during the creation of this PKGBUILD.
+Pull requests are welcome, the number of packages here is enormous (it is a full desktop environment, after all), and this is my first software/package management project of any kind.
 
 Credit also to Avinash Duduskar, for valuable contributions. 

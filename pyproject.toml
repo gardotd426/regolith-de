@@ -1,0 +1,30 @@
+[project]
+name = "regolith-de"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "gardotd426"},
+    {name = "mrzor"}
+]
+dependencies = [
+    "beautifulsoup4~=4.9",
+    "requests~=2.25",
+    "loguru~=0.5",
+    "click~=7.1",
+]
+dev-dependencies = [
+    "pdbpp~=0.10",
+]
+requires-python = ">=3.9"
+dynamic = ["classifiers"]
+license = {text = "MIT"}
+
+[project.urls]
+homepage = ""
+
+[tool]
+[tool.pdm]
+
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"

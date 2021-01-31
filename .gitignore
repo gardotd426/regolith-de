@@ -1,0 +1,8 @@
+/__pypackages__
+regolith_de.egg-info
+/*.deb
+/PKGBUILD.new
+/.pdm.toml
+/*.pickle
+/*.pkg.tar
+/pkg
