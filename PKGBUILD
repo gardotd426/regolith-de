@@ -221,6 +221,7 @@ package_regolith-i3xrocks () {
     extract_deb "${srcdir}"/i3xrocks-battery_3.5.6-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-cpu-usage_3.5.6-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-focused-window-name_3.5.6-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-info_3.5.6-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-key-indicator_3.5.6-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-media-player_3.5.6-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-memory_3.5.6-1_amd64.deb
@@ -233,7 +234,6 @@ package_regolith-i3xrocks () {
     extract_deb "${srcdir}"/i3xrocks-weather_3.5.6-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-wifi_3.5.6-1_amd64.deb
 
-#    patch "${pkgdir}"/usr/share/i3xrocks/net-traffic -i "${srcdir}"/net-traffic.patch
     move_copyright
 
 }
