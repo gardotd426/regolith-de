@@ -10,8 +10,8 @@ pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-
         regolith-styles # alll the styles shit
         regolith-st 
         regolith-desktop-config)
-pkgver=1.5
-pkgrel=2
+pkgver=1.5.3
+pkgrel=1
 arch=('x86_64')
 url=https://github.com/regolith-linux/regolith-desktop
 url2=https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files
@@ -74,7 +74,7 @@ http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styl
         "${url2}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
         "${url2}"/xrescat_1.2.1-1_amd64.deb
         flashback.patch
-)
+	git+https://github.com/regolith-linux/regolith-rofication.git)
 
 
 sha256sums=(cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818
@@ -129,7 +129,7 @@ sha256sums=(cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818
 	    b84219798b644e97a473f99f9deef9e1985be1608fdbed794755dde80b694795
 	    ae1b03ac0d10e6f5de8ac40670caf3204f2f38f2a3a3a3d29182a2fd5740edce
 	    63082efb191f31c3bc4be28f7118aa38e53b0d18b4366cbdc275a628b36876ce
-)
+	    'SKIP')
 
 
 
@@ -292,17 +292,18 @@ package_regolith-desktop-config () {
     extract_deb "${srcdir}"/regolith-system_1.5.0-1_amd64.deb
     extract_deb "${srcdir}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
     extract_deb "${srcdir}"/regolith-i3xrocks-config_3.5.7-1_amd64.deb
-    extract_deb "${srcdir}"/regolith-rofication_1.3.1-1_amd64.deb    
 
     move_copyright
 ## extra commands
-    mv "${pkgdir}"/usr/lib/python3 "${pkgdir}"/usr/lib/python3.8
-    mv "${pkgdir}"/usr/lib/python3.8/dist-packages "${pkgdir}"/usr/lib/python3.8/site-packages
     rm "${pkgdir}"/usr/share/backgrounds/lucas-bellator-C0OD8OM-oM0-unsplash.jpg
     rm "${pkgdir}"/usr/share/applications/reboot.desktop
     rm "${pkgdir}"/usr/share/applications/logout.desktop
     rm "${pkgdir}"/usr/share/applications/shutdown.desktop
     sed -i 's/x-terminal-emulator/st/g' "${pkgdir}"/etc/regolith/i3/config
+    cd "${srcdir}"/regolith-rofication
+    python setup.py build
+    python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
+    install -Dm644 "${srcdir}"/regolith-rofication/80_rofication "${pkgdir}"/etc/regolith/i3xrocks/conf.d/
 }
 
 
@@ -313,5 +314,4 @@ package_regolith-st () {
 	conflicts=('st')
 
 	extract_deb "${srcdir}"/regolith-st_0.8.2-1ubuntu20ppa5_amd64.deb
-
 }
