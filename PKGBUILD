@@ -74,7 +74,8 @@ http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styl
         "${url2}"/ubiquity-slideshow-regolith_138.5-ubuntu1~regolith1_all.deb
         "${url2}"/xrescat_1.2.1-1_amd64.deb
         flashback.patch
-	git+https://github.com/regolith-linux/regolith-rofication.git)
+	git+https://github.com/regolith-linux/regolith-rofication.git
+        git+https://github.com/regolith-linux/i3xrocks.git)
 
 
 sha256sums=(cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818
@@ -129,6 +130,7 @@ sha256sums=(cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818
 	    b84219798b644e97a473f99f9deef9e1985be1608fdbed794755dde80b694795
 	    ae1b03ac0d10e6f5de8ac40670caf3204f2f38f2a3a3a3d29182a2fd5740edce
 	    63082efb191f31c3bc4be28f7118aa38e53b0d18b4366cbdc275a628b36876ce
+	    'SKIP'
 	    'SKIP')
 
 
@@ -169,6 +171,15 @@ move_copyright() {
     find ${pkgdir}/usr/share/doc -name "copyright" -exec mv {} ${pkgdir}/usr/share/licenses/${pkgname} \;
     find ${pkgdir}/usr/share/doc -type d -empty -delete
 }
+
+build () {
+    cd "${srcdir}"/regolith-rofication
+    python setup.py build
+    cd "${srcdir}"/i3xrocks/
+}
+
+
+
 
 package_regolith-i3 () {
     pkgdesc="Regolith's i3-gaps-based DE's underpinnings and gnome foundational dependencies"
@@ -217,7 +228,7 @@ package_regolith-i3xrocks () {
     conflicts=('i3xrocks')
     provides=('i3xrocks')
 
-    extract_deb "${srcdir}"/i3xrocks_1.3.5-1_amd64.deb
+ #   extract_deb "${srcdir}"/i3xrocks_1.3.5-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-battery_3.5.7-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-cpu-usage_3.5.7-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-focused-window-name_3.5.7-1_amd64.deb
@@ -233,6 +244,14 @@ package_regolith-i3xrocks () {
     extract_deb "${srcdir}"/i3xrocks-volume_3.5.7-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-weather_3.5.7-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-wifi_3.5.7-1_amd64.deb
+    cd "${srcdir}"/i3xrocks/
+#    ./autogen.sh
+#    ./configure 
+#    make && sed -i 's+}/bin+}/usr/bin+g' configure 
+#    make prefix=$pkgdir/ install
+    ./autogen.sh
+    ./configure --prefix=$pkgdir/
+    make && make datarootdir=$pkgdir/usr/share exec_prefix=$pkgdir/usr install
 
     move_copyright
 
@@ -301,7 +320,6 @@ package_regolith-desktop-config () {
     rm "${pkgdir}"/usr/share/applications/shutdown.desktop
     sed -i 's/x-terminal-emulator/st/g' "${pkgdir}"/etc/regolith/i3/config
     cd "${srcdir}"/regolith-rofication
-    python setup.py build
     python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
     install -Dm644 "${srcdir}"/regolith-rofication/80_rofication "${pkgdir}"/etc/regolith/i3xrocks/conf.d/
 }
