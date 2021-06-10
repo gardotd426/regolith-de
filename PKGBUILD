@@ -22,8 +22,8 @@ license=('custom: multiple')
 groups=('regolith-de')
 makedepends=('wget')
 
-source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
-        "${url2}"/cahuella_1.0.2-1_amd64.deb
+source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-theme/ayu-theme_0.2.2-1_amd64.deb
+        http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/c/cahuella/cahuella_1.0.3-1_amd64.deb
         "${url2}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/i/i3xrocks/i3xrocks_1.3.5-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-i3xrocks-config/i3xrocks-battery_3.6.4-1_amd64.deb
@@ -58,8 +58,8 @@ source=("${url2}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-ayu-dark_2.9.7-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-ayu-mirage_2.9.7-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-cahuella_2.9.7-1_amd64.deb
-http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-dracula_2.9.7-1_amd64.deb
-http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-gruvbox_2.9.7-1_amd64.deb
+        http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-dracula_2.9.7-1_amd64.deb
+        http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-gruvbox_2.9.7-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-lascaille_2.9.7-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-nord_2.9.7-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-pop-os_2.9.7-1_amd64.deb
@@ -70,15 +70,15 @@ http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styl
         "${url2}"/regolith-st_0.8.2-1ubuntu20ppa5_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-styles_2.9.7-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-system/regolith-system_1.5.3-1_amd64.deb
-        "${url2}"/solarc-theme_800c997-1_amd64.deb
-        http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/u/ubiquity-slideshow-regolith/ubiquity-slideshow-regolith_168.5-regolith1_all.deb
+        http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/s/solarc-theme/solarc-theme_800c997-2_amd64.deb
+        http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/u/ubiquity-slideshow-regolith/ubiquity-slideshow-regolith_168.6-regolith1_all.deb
         "${url2}"/xrescat_1.2.1-1_amd64.deb
         flashback.patch
 	git+https://github.com/regolith-linux/regolith-rofication.git)
 
 
-sha256sums=(cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818
-            22bbf4aaf1870963befffae41bfe7c2a0c8b674b4b0d15554a68b80a5f2429e3
+sha256sums=(6e8c3d2dbe8c192c40593c85c9c5f2f6fb29ea376e72770461b41b867a2dd996
+            bc90c3f172fbff7b570a0bac516b9c76f7ed4cf3ca2a09003ff6c966fc03193d
             2c4060dda3ee2d3b4fc587d35a8e9c9e6e8e7cc63edf72cf1e17322b1700d902
             ed7b5e923a706ff10f94944ce568a49d05c0917b1ffb841ff531ed656fc2c0e6
             362458ae72f749e8c42185b736500a7947f2580288a28ce8743230462c4e9e51
@@ -125,8 +125,8 @@ sha256sums=(cf0d111e9bc12e163b930849105626e535550d066bac280052d83a0e4d458818
             900c285972a9969b4d2d8bcd67dabccb817a2a77a102251d5dc1b2e254f095c8
             24b0501147a6c6e706b1e51b073df17c288cf45f875262bddd2f37d58e6cea7e
             dab3cfb66be6e312e177ac794dbcc42628216c76d0efbffb4699fd50395f6226
-            e37fd4c1397178271479b6fb59bcb30b623c89ce13ae0d0f8ad158118ed5b763
-	    d6832e778e7cbdc285d4d4dccc459812ab9c6720926e95ad6fc44c7cee912a44
+            7be92e96f74cb0ec7e97c6c38861c6e9417636c9cb9bacb77f6aea8bd5eb3cb4
+	    e58c01ccee273f5567a33509b74766eb5a5572284d7cbb32b7017ac7986f90eb
 	    ae1b03ac0d10e6f5de8ac40670caf3204f2f38f2a3a3a3d29182a2fd5740edce
 	    63082efb191f31c3bc4be28f7118aa38e53b0d18b4366cbdc275a628b36876ce
 	    'SKIP')
@@ -246,8 +246,8 @@ package_regolith-styles () {
     conflicts=("paper-icon-theme" "nordic-theme-git" "gtk-theme-solarc-git" "gtk-theme-plano" "gtk-theme-plano-git")
     provides=("paper-icon-theme" "regolith-styles" "regolith-look" "gtk-theme-solarc" "gtk-theme-plano")
 
-    extract_deb "${srcdir}"/ayu-theme_0.2.0-1ubuntu1~ppa1_amd64.deb
-    extract_deb "${srcdir}"/cahuella_1.0.2-1_amd64.deb
+    extract_deb "${srcdir}"/ayu-theme_0.2.2-1_amd64.deb
+    extract_deb "${srcdir}"/cahuella_1.0.3-1_amd64.deb
     extract_deb "${srcdir}"/nordic_1.6.5-1ubuntu1ppa1_all.deb
     extract_deb "${srcdir}"/paper-icon-theme_1.5.723-201905252133~daily~ubuntu19.04.1_all.deb
     extract_deb "${srcdir}"/plano-theme_3.36-1-1regolith1_all.deb
@@ -265,7 +265,7 @@ package_regolith-styles () {
     extract_deb "${srcdir}"/regolith-look-solarized-dark_2.9.7-1_amd64.deb
     extract_deb "${srcdir}"/regolith-look-ubuntu_2.9.7-1_amd64.deb
     extract_deb "${srcdir}"/regolith-styles_2.9.7-1_amd64.deb
-    extract_deb "${srcdir}"/solarc-theme_800c997-1_amd64.deb
+    extract_deb "${srcdir}"/solarc-theme_800c997-2_amd64.deb
 
     move_copyright
     cp "${pkgdir}"/etc/regolith/styles/ayu/typeface "${pkgdir}"/etc/regolith/styles/lascaille/typeface
@@ -290,7 +290,7 @@ package_regolith-desktop-config () {
     extract_deb "${srcdir}"/regolith-i3-gaps-config_2.8.6-1_amd64.deb
     extract_deb "${srcdir}"/regolith-rofi-config_1.3.1-1_amd64.deb
     extract_deb "${srcdir}"/regolith-system_1.5.3-1_amd64.deb
-    extract_deb "${srcdir}"/ubiquity-slideshow-regolith_168.5-regolith1_all.deb
+    extract_deb "${srcdir}"/ubiquity-slideshow-regolith_168.6-regolith1_all.deb
     extract_deb "${srcdir}"/regolith-i3xrocks-config_3.6.4-1_amd64.deb
 
     move_copyright
