@@ -24,7 +24,7 @@ makedepends=('wget')
 
 source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-theme/ayu-theme_0.2.2-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/c/cahuella/cahuella_1.0.3-1_amd64.deb
-        "${url2}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
+        "${url2}"/i3-snapshot_1.0.1-2hirsute_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/i/i3xrocks/i3xrocks_1.3.5-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-i3xrocks-config/i3xrocks-battery_3.6.4-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-i3xrocks-config/i3xrocks-cpu-usage_3.6.4-1_amd64.deb
@@ -65,7 +65,6 @@ source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-t
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-pop-os_2.9.7-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-solarized-dark_2.9.7-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-look-ubuntu_2.9.7-1_amd64.deb
-        "${url2}"/regolith-rofication_1.3.1-1_amd64.deb
         "${url2}"/regolith-rofi-config_1.3.1-1_amd64.deb
         "${url2}"/regolith-st_0.8.2-1ubuntu20ppa5_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/r/regolith-styles/regolith-styles_2.9.7-1_amd64.deb
@@ -79,7 +78,7 @@ source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-t
 
 sha256sums=(6e8c3d2dbe8c192c40593c85c9c5f2f6fb29ea376e72770461b41b867a2dd996
             bc90c3f172fbff7b570a0bac516b9c76f7ed4cf3ca2a09003ff6c966fc03193d
-            2c4060dda3ee2d3b4fc587d35a8e9c9e6e8e7cc63edf72cf1e17322b1700d902
+	    afab55c89c58210ce24bc0416cb1cf474deb446010b209df623c29d1bdc481fb
             ed7b5e923a706ff10f94944ce568a49d05c0917b1ffb841ff531ed656fc2c0e6
             362458ae72f749e8c42185b736500a7947f2580288a28ce8743230462c4e9e51
             bcad5c52397bf04ad4320be5e62ccaad5b7e139f9fe86148a70d77dcf12c152f
@@ -120,7 +119,6 @@ sha256sums=(6e8c3d2dbe8c192c40593c85c9c5f2f6fb29ea376e72770461b41b867a2dd996
             9a2e85ee62e51413263be7f90cf781fe2a86f9ce7f7c19565c033cf5ae72a038
             122b15438765be36fdd50fd53cd69bc5f873a97c1357d09f9c77fa824b94c6da
             5ef87bae9ba8c84b56a595858b0de84954bd07548275a0c86e57bfecdbea0737
-            a05906dff1fa4844b9f54a7f048379011c2b93ca56e90434257a5c469debe5a6
             1edb890270688a337bdf6243dd1216a282210ab9a35b67cf91a4610b0df8cb85
             900c285972a9969b4d2d8bcd67dabccb817a2a77a102251d5dc1b2e254f095c8
             24b0501147a6c6e706b1e51b073df17c288cf45f875262bddd2f37d58e6cea7e
@@ -187,7 +185,7 @@ package_regolith-i3 () {
     provides=('i3-snapshot' 'xrescat' 'regolith-gnome-flashback')
     conflicts=()
 
-    extract_deb "${srcdir}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
+    extract_deb "${srcdir}"/i3-snapshot_1.0.1-2hirsute_amd64.deb
     extract_deb "${srcdir}"/regolith-gnome-flashback_2.6.2-1_amd64.deb
     extract_deb "${srcdir}"/xrescat_1.2.1-1_amd64.deb
     
@@ -204,7 +202,7 @@ package_i3-snapshot () {
     depends=('i3' 'jsoncpp' 'libsigc++')
     provides=('i3-snapshot')
 
-    extract_deb "${srcdir}"/i3-snapshot_1.0-1ubuntu1~ppa1_amd64.deb
+    extract_deb "${srcdir}"/i3-snapshot_1.0.1-2hirsute_amd64.deb
 
     move_copyright
 }
