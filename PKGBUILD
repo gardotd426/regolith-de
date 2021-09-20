@@ -73,7 +73,11 @@ source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-t
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/u/ubiquity-slideshow-regolith/ubiquity-slideshow-regolith_168.6-regolith1_all.deb
         "${url2}"/xrescat_1.2.1-1_amd64.deb
         flashback.patch
-	git+https://github.com/regolith-linux/regolith-rofication.git)
+	git+https://github.com/regolith-linux/regolith-rofication.git
+	http://launchpad.net/\~regolith-linux/+archive/ubuntu/release/+files/midnight-gtk-theme_1.1.0-1_all.deb
+	http://launchpad.net/\~regolith-linux/+archive/ubuntu/release/+files/regolith-look-solarized-light_2.9.7-1_amd64.deb
+	http://launchpad.net/\~regolith-linux/+archive/ubuntu/release/+files/i3xrocks-app-launcher_3.6.4-1_amd64.deb
+	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-look-midnight_2.9.7-1_amd64.deb)
 
 
 sha256sums=(6e8c3d2dbe8c192c40593c85c9c5f2f6fb29ea376e72770461b41b867a2dd996
@@ -127,7 +131,11 @@ sha256sums=(6e8c3d2dbe8c192c40593c85c9c5f2f6fb29ea376e72770461b41b867a2dd996
 	    e58c01ccee273f5567a33509b74766eb5a5572284d7cbb32b7017ac7986f90eb
 	    ae1b03ac0d10e6f5de8ac40670caf3204f2f38f2a3a3a3d29182a2fd5740edce
 	    63082efb191f31c3bc4be28f7118aa38e53b0d18b4366cbdc275a628b36876ce
-	    'SKIP')
+	    'SKIP'
+	    528e231adb021eba916a2d9a82c5f4937f1103027d0588941d577112a1163161
+	    5c4752152bdfbf2936d0f5affd96b8be8a0e2ca341f2393737fa03f6261f7ead
+	    3aba80c709377e53c4beabc0e14cb274cc96e57e2fbf6e1e467e834f0033cf05
+	    4311b12f301b27bf24aaafa49528d251144c2a1071f999c1dae1341aa66b3c1a)
 
 
 
@@ -216,6 +224,7 @@ package_regolith-i3xrocks () {
     provides=('i3xrocks')
 
     extract_deb "${srcdir}"/i3xrocks_1.3.5-1_amd64.deb
+    extract_deb "${srcdir}"/i3xrocks-app-launcher_3.6.4-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-battery_3.6.4-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-cpu-usage_3.6.4-1_amd64.deb
     extract_deb "${srcdir}"/i3xrocks-focused-window-name_3.6.4-1_amd64.deb
@@ -240,7 +249,7 @@ package_regolith-i3xrocks () {
 package_regolith-styles () {
     pkgdesc="Regolith's themes for i3, gdm, gtk, rofi, plymouth, etc."
     license=('custom: GPLv3')
-    depends=("regolith-i3" "gtk3" "ttf-jetbrains-mono")
+    depends=("regolith-i3" "gtk3" "ttf-jetbrains-mono" "ttf-ubuntu-font-family")
     conflicts=("paper-icon-theme" "nordic-theme-git" "gtk-theme-solarc-git" "gtk-theme-plano" "gtk-theme-plano-git")
     provides=("paper-icon-theme" "regolith-styles" "regolith-look" "gtk-theme-solarc" "gtk-theme-plano")
 
@@ -264,7 +273,9 @@ package_regolith-styles () {
     extract_deb "${srcdir}"/regolith-look-ubuntu_2.9.7-1_amd64.deb
     extract_deb "${srcdir}"/regolith-styles_2.9.7-1_amd64.deb
     extract_deb "${srcdir}"/solarc-theme_800c997-2_amd64.deb
-
+    extract_deb "${srcdir}"/midnight-gtk-theme_1.1.0-1_all.deb
+    extract_deb "${srcdir}"/regolith-look-solarized-light_2.9.7-1_amd64.deb
+    extract_deb "${srcdir}"/regolith-look-midnight_2.9.7-1_amd64.deb
     move_copyright
     cp "${pkgdir}"/etc/regolith/styles/ayu/typeface "${pkgdir}"/etc/regolith/styles/lascaille/typeface
     cp "${pkgdir}"/etc/regolith/styles/ayu/typeface "${pkgdir}"/etc/regolith/styles/cahuella/typeface
