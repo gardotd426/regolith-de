@@ -72,9 +72,7 @@ If you would like to test this PKGBUILD, the first steps would be to try it out 
 
 Note: VMs generally don't play well with picom/compton compositing. If you have any issues with performance, make sure to kill the compositor.
 
-IF THIS MESSAGE IS STILL PRESENT, IT IS NOT READY FOR PRIMETIME. EITHER DON'T TRY IT AT ALL, OR TRY AT YOUR OWN RISK. THERE IS NO WARRANTY.
-
-When I decide that it's ready (hopefully with plenty of input), I will make it available in the AUR. 
+After extended testing, I'm prepared to say that this is ready for use. I will make it available in the AUR soon, I'm just waiting on something from upstream. But feel free to use it, it's fully functional and has been tested to my satisfaction.  
 
 
 ## Credits
