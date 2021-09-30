@@ -10,7 +10,7 @@ pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-
         regolith-styles # alll the styles shit
         regolith-st 
         regolith-desktop-config)
-pkgver=1.5.3
+pkgver=1.6
 pkgrel=1
 arch=('x86_64')
 url=https://github.com/regolith-linux/regolith-desktop
