@@ -8,7 +8,7 @@ This is a PKGBUILD for Regolith Linux's fork of the i3 (plus Gnome-flashback) wi
 
 I will check weekly for upstream updates to the launchpad packages, which is honestly probably way more often than necessary - Regolith is based on Ubuntu after all, and so it doesn't update its DE packages at the same rate as we're used to on Arch. 
 
-Where possible (more accurately, where I've found possible), Arch/AUR packages will be used if compatible versions exist. Currently Arch's i3-gaps, rofi, and some other packages are being used. Remontoire is in the AUR as `remontoire-git` and will need to be installed manually when using `makepkg` and not an AUR helper, as `makepkg` will *not* pull in dependencies from the AUR. This is why for the time being, `remontoire` is not listed as a hard dependency. It will likely be added when this goes live on the AUR. 
+Where possible (more accurately, where I've found possible), Arch/AUR packages will be used if compatible versions exist. Currently Arch's i3-gaps, rofi, and some other packages are being used.
 
 Because of the way AUR packages work, combined with Ubuntu-specific idiosyncracies in the original config file for Regolith's i3, I've had to bundle the regolith build of st - the simple terminal, and use that as the default terminal. Feel free to change it in the config file (`/etc/regolith/i3/config`) just like you would with regular i3, it's just the only other option was for there to be no default terminal, or else try and choose one that some people will have and others won't. I get around this by just including the terminal, and luckily it's st so it's really small. It's its own package, so you can also remove it (`sudo pacman -R regolith-st`), it's not a dependency of anything, it just gets installed with the meta-package. 
 
@@ -35,12 +35,6 @@ PRs are welcome.
     ```
     $ makepkg -si
     ```
-3. Install optional dependencies
-
-    I will probably add remontoire-git to the meta-package in the future, but as of right now I strongly suggest installing it, it provides the keyboard shortcut viewer.
-
-    [Install the following from the AUR](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_and_upgrading_packages) :
-    - [remontoire-git](https://aur.archlinux.org/packages/remontoire-git/) - For the help overlay
 
 4. Start Regolith Desktop Environment
 
