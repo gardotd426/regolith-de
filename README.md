@@ -27,7 +27,7 @@ If you would like to test this PKGBUILD, the first steps would be to try it out 
 2. Install git and download the source code for this repo.
 
     ```
-    $ sudo pacman -Sy git
+    $ sudo pacman -S git
     
     $ mkdir -p ${HOME}/Downloads/build &&cd $_
 
@@ -53,7 +53,7 @@ If you would like to test this PKGBUILD, the first steps would be to try it out 
     The other way is of course to run the session from a manual xorg startup:
 
     ```
-    $ sudo pacman -Sy xorg-xinit
+    $ sudo pacman -S xorg-xinit
 
     $ echo 'exec regolith-session' > ${HOME}/.xinitrc
 
