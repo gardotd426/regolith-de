@@ -6,7 +6,7 @@ Standalone Regolith desktop environment for Arch Linux
 
 This is a PKGBUILD for Regolith Linux's fork of the i3 (plus Gnome-flashback) window manager/desktop environment, to rather hackily rip the desktop environment for Regolith Linux and make it work on Arch Linux and it's derivatives. 
 
-Given that Regolith is based on Ubuntu, this will likely only be updated when new releases come out (20.04, 20.10, etc.), barring of course something breaks. But package versions will be taken from the "Release" branch of the Regolith PPA repo, as opposed to "Stable," "Unstable," or "Experimental." If that changes, it'll be noted in the README.
+I will check weekly for upstream updates to the launchpad packages, which is honestly probably way more often than necessary - Regolith is based on Ubuntu after all, and so it doesn't update its DE packages at the same rate as we're used to on Arch. 
 
 Where possible (more accurately, where I've found possible), Arch/AUR packages will be used if compatible versions exist. Currently Arch's i3-gaps, rofi, and some other packages are being used. Remontoire is in the AUR as `remontoire-git` and will need to be installed manually when using `makepkg` and not an AUR helper, as `makepkg` will *not* pull in dependencies from the AUR. This is why for the time being, `remontoire` is not listed as a hard dependency. It will likely be added when this goes live on the AUR. 
 
@@ -18,35 +18,33 @@ As of the latest update to Regolith proper, it seems that my package no longer c
 
 PRs are welcome.
 
-If you would like to test this PKGBUILD, the first steps would be to try it out in a Virtual Machine.
+## Installation
 
-**Virtual Machine**
+**Manually Using `makepkg`**
 
-1. Spin up a new VM with a fresh install of Arch Linux.
-
-2. Install git and download the source code for this repo.
+1. Install git and clone the AUR package.
 
     ```
     $ sudo pacman -S git
     
     $ mkdir -p ${HOME}/Downloads/build &&cd $_
 
-    $ git clone https://github.com/gardotd426/regolith-de.git && cd regolith-de
+    $ git clone https://aur.archlinux.org/regolith-de.git && cd regolith-de
     ```
 
-4. [Install the packages](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_and_upgrading_packages)
+2. [Install the packages](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_and_upgrading_packages)
 
     ```
     $ makepkg -si
     ```
-5. Install optional dependencies
+3. Install optional dependencies
 
-    Until this PKGBUILD is live it isn't possible to include dependencies from the AUR. These will need to be installed manually while in testing.
+    I will probably add remontoire-git to the meta-package in the future, but as of right now I strongly suggest installing it, it provides the keyboard shortcut viewer.
 
     [Install the following from the AUR](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_and_upgrading_packages) :
     - [remontoire-git](https://aur.archlinux.org/packages/remontoire-git/) - For the help overlay
 
-6. Start Regolith Desktop Environment
+4. Start Regolith Desktop Environment
 
     The best way obviously is through a display manager (DM). It definitely works with LightDM and SDDM, it should also work with GDM. Just select "Regolith" from the list of desktop environments.
 
@@ -60,6 +58,13 @@ If you would like to test this PKGBUILD, the first steps would be to try it out 
     $ startx
     ```
 
+**Using an AUR Helper**
+
+`makepkg` will not allow pulling dependencies from the AUR, only the official repos, so a meta-package that pulls in all the separate packages of the package base wouldn't work. However, AUR helpers *can* have AUR dependencies, so if you're using an AUR helper you will just run (using paru as an example, feel free to substitute yay/paru/pamac/etc):
+
+1. `paru -S regolith-full`
+
+This will build and install regolith-i3, regolith-i3xrocks, regolith-desktop-config, regolith-st, and regolith-styles, the five packages that make up the entire desktop environment (along with their dependencies). 
 ## Looks/Styles
 
    Regolith has a pretty cool (IMO) way of styles/theming, and I've kept all that intact. 
@@ -70,9 +75,7 @@ If you would like to test this PKGBUILD, the first steps would be to try it out 
  
  - `regolith-look refresh` will refresh it for your current session, changing the terminal theme, i3xrocks theme, and wallpaper (for the styles that have their own wallpaper). It's pretty simple. 
 
-Note: VMs generally don't play well with picom/compton compositing. If you have any issues with performance, make sure to kill the compositor.
-
-After extended testing, I'm prepared to say that this is ready for use. I will make it available in the AUR soon, I'm just waiting on something from upstream. But feel free to use it, it's fully functional and has been tested to my satisfaction.  
+Note: VMs generally don't play well with picom/compton compositing. If you are running Regolith in a VM and have any issues with performance, make sure to kill the compositor.
 
 
 ## Credits
@@ -80,4 +83,4 @@ After extended testing, I'm prepared to say that this is ready for use. I will m
 Credit to Kevin Gilmer @kgilmer for the creation of Regolith Linux as well as invaluable insight during the creation of this PKGBUILD. 
 Pull requests are welcome, the number of packages here is enormous (it is a full desktop environment, after all), and this is my first software/package management project of any kind. 
 
-Much credit also to Avinash Duduskar, for already many contributions. 
+Credit also to Avinash Duduskar, for valuable contributions. 
