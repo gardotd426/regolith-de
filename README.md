@@ -27,8 +27,6 @@ PRs are welcome.
     ```
     $ sudo pacman -S git
     
-    $ mkdir -p ${HOME}/Downloads/build &&cd $_
-
     $ git clone https://aur.archlinux.org/regolith-de.git && cd regolith-de
     ```
 
