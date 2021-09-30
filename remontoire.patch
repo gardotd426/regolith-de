@@ -1,0 +1,14 @@
+--- build-aux/meson/postinstall.py	2021-09-30 12:54:27.664203041 -0400
++++ postinstall.py	2021-09-30 12:56:14.101830253 -0400
+@@ -1,9 +1,10 @@
++  GNU nano 5.8                                   build-aux/meson/postinstall.py
+ #!/usr/bin/env python3
+ 
+ from os import environ, path
+ from subprocess import call
+ 
+-prefix = environ.get('MESON_INSTALL_PREFIX', '/usr/local')
++prefix = environ.get('MESON_INSTALL_PREFIX', '/usr')
+ datadir = path.join(prefix, 'share')
+ destdir = environ.get('DESTDIR', '')
+ 
