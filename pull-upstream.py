@@ -134,7 +134,7 @@ def pkgbuild_end_eval(shell_src):
     #     sh$ echo '${source[@]}' | cat PKGBUILD - | bash
     #
     # works just file, and prints a very easy to parse space separated source list.
-    result = subprocess.run(f"echo '{shell_src}' | cat PKGBUILD - | bash -s",
+    result = subprocess.run(f"echo -e '\n{shell_src}' | cat PKGBUILD - | bash -s",
                             capture_output=True, shell=True, text=True, check=True)
     return result
 
