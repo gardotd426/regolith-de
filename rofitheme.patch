@@ -1,0 +1,25 @@
+--- a/etc/regolith/i3/config	2021-10-20 22:33:55.000000000 -0400
++++ b/etc/regolith/i3/config	2021-10-22 17:07:59.100472801 -0400
+@@ -101,17 +101,19 @@
+ 
+ ## Launch // Application // <> Space ##
+ set_from_resource $i3-wm.binding.launcher.app i3-wm.binding.launcher.app space
+-set_from_resource $i3-wm.program.launcher.app i3-wm.program.launcher.app rofi -show drun -theme $rofiTheme
++set_from_resource $i3-wm.program.launcher.app i3-wm.program.launcher.app rofi -show drun -theme $(xrescat rofiTheme)
+ bindsym $mod+$i3-wm.binding.launcher.app exec $i3-wm.program.launcher.app
+ 
+ ## Launch // Command // <><Shift> Space ##
+ set_from_resource $i3-wm.binding.launcher.cmd i3-wm.binding.launcher.cmd Shift+space
+-set_from_resource $i3-wm.program.launcher.cmd i3-wm.program.launcher.cmd rofi -show run -theme $rofiTheme
++set_from_resource $i3-wm.program.launcher.cmd i3-wm.program.launcher.cmd rofi -show run -theme $(xrescat rofiTheme)
++
+ bindsym $mod+$i3-wm.binding.launcher.cmd exec $i3-wm.program.launcher.cmd
+ 
+ ## Navigate // Window by Name // <><Ctrl> Space ##
+ set_from_resource $i3-wm.binding.launcher.window i3-wm.binding.launcher.window Ctrl+space
+-set_from_resource $i3-wm.program.launcher.window i3-wm.program.launcher.window rofi -show window -theme $rofiTheme
++set_from_resource $i3-wm.program.launcher.window i3-wm.program.launcher.window rofi -show window -theme $(xrescat rofiTheme)
++
+ bindsym $mod+$i3-wm.binding.launcher.window exec $i3-wm.program.launcher.window
+ 
+ ## Launch // This Dialog // <><Shift> ? ##

@@ -103,7 +103,8 @@ source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-t
 	http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/g/gruvbox-gtk/gruvbox-gtk_1.0.1-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/d/dracula-gtk/dracula-gtk_1.0.1-1_amd64.deb
 	http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/p/pop-gtk-theme/pop-gtk-theme_4.1.4\~1560290633\~18.04\~f75e86a_all.deb
-        git+https://github.com/regolith-linux/remontoire.git)
+        git+https://github.com/regolith-linux/remontoire.git
+	rofitheme.patch)
 
 
 sha256sums=(6e8c3d2dbe8c192c40593c85c9c5f2f6fb29ea376e72770461b41b867a2dd996
@@ -170,6 +171,7 @@ sha256sums=(6e8c3d2dbe8c192c40593c85c9c5f2f6fb29ea376e72770461b41b867a2dd996
 	    6884a081345953c3e5aa2cf7c32253604eb9bf07b5ca4570cf41802d6ca762d6
 	    2f3d57a5445f46931b8184cdbea0aa52b5251b319f367ec188db00187c1c7e71
 	    eb44cac833c369dc0f3afe71e334a7bccaaef45836030b3c9ab3d9dc70500370
+	    SKIP
 	    SKIP)
 
 
@@ -573,6 +575,8 @@ package_regolith-desktop-config () {
 #    rm "${pkgdir}"/usr/share/applications/logout.desktop
 #    rm "${pkgdir}"/usr/share/applications/shutdown.desktop
     sed -i 's/x-terminal-emulator/st/g' "${pkgdir}"/etc/regolith/i3/config
+    cd "${pkgdir}"
+    patch -Np1 -i "${srcdir}"/rofitheme.patch
     cd "${srcdir}"/regolith-rofication
     python setup.py build
     python setup.py install --root="${pkgdir}" --optimize=1 --skip-build
