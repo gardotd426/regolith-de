@@ -34,7 +34,7 @@
  ## Launch // Look Selector // <><Alt> l ##
  set_from_resource $i3-wm.binding.look_selector i3-wm.binding.look_selector Mod1+l
 -set_from_resource $i3-wm.program.look_selector i3-wm.program.look_selector rofi -show look -modi look:/usr/share/rofi/modi/look-selector.sh
-+set_from_resource $i3-wm.program.look_selector i3-wm.program.look_selector rofi -show look -modi look:/usr/share/rofi/modi/look-selector.sh $(xrescat rofi.theme)
++set_from_resource $i3-wm.program.look_selector i3-wm.program.look_selector rofi -show look -modi look:/usr/share/rofi/modi/look-selector.sh -theme $(xrescat rofi.theme)
  bindsym $mod+$i3-wm.binding.look_selector exec $i3-wm.program.look_selector
  
  ###############################################################################
