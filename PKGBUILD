@@ -37,7 +37,7 @@ url4=http://archive.ubuntu.com/ubuntu/pool/main/g/gnome-session/
 url5=https://launchpad.net/~regolith-linux/+archive/ubuntu/stable/+files
 license=('custom: multiple')
 groups=('regolith-de')
-makedepends=('wget' 'fakeroot' 'binutils' 'patch' 'python' 'meson' 'ninja' 'gtk3' 'git' 'gcc' 'vala' 'xcb-util-xrm')
+makedepends=('wget' 'fakeroot' 'binutils' 'patch' 'python' 'meson' 'ninja' 'gtk3' 'git' 'gcc' 'vala' 'xcb-util-xrm' 'python-appdirs')
 
 source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-theme/ayu-theme_0.2.2-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/c/cahuella/cahuella_1.0.3-1_amd64.deb
@@ -482,7 +482,7 @@ package_i3xrocks-wifi () {
 package_regolith-styles () {
     pkgdesc="Regolith's themes for i3, gdm, gtk, rofi, plymouth, etc."
     license=('custom: GPLv3')
-    depends=("regolith-i3" "gtk3" "ttf-iosevka-nerd" "ttf-jetbrains-mono" "adwaita-icon-theme" "otf-fira-mono" "ttf-ubuntu-font-family" "arc-icon-theme")
+    depends=("regolith-i3" "gtk3" "ttf-iosevka-nerd" "ttf-jetbrains-mono" "adwaita-icon-theme" "otf-fira-mono" "ttf-ubuntu-font-family" "arc-icon-theme" "python-appdirs")
     conflicts=("paper-icon-theme" "qogir-icon-theme" "moka-icon-theme-git" "nordic-theme-git" "gtk-theme-solarc-git" "gtk-theme-plano" "gtk-theme-plano-git")
     provides=("paper-icon-theme" "regolith-styles" "regolith-look" "gtk-theme-solarc" "gtk-theme-plano")
     groups=('regolith-de')
