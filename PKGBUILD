@@ -28,7 +28,7 @@ pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-
         regolith-desktop-config
 	remontoire-regolith)
 pkgver=1.6
-pkgrel=7
+pkgrel=10
 arch=('x86_64')
 url=https://github.com/regolith-linux/regolith-desktop
 url2=https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files
@@ -143,11 +143,11 @@ sha256sums=(6e8c3d2dbe8c192c40593c85c9c5f2f6fb29ea376e72770461b41b867a2dd996
 	    2f3d57a5445f46931b8184cdbea0aa52b5251b319f367ec188db00187c1c7e71
 	    eb44cac833c369dc0f3afe71e334a7bccaaef45836030b3c9ab3d9dc70500370
 	    SKIP
-	    SKIP
-	    SKIP
-	    SKIP
-	    SKIP)
-
+	    734b6fdfbfc78cd9c41b1c32e59ef15671a0ef650719fdedfc47f50c5ec633ad
+	    705c95cdfd5847cd6c7fafe123cbdc6c3f404407118967797210189157c52e5c
+	    ffc32c177754990e7f5f7126415bd8f2d210dd875ad5ae43b057299a7d395905
+	    5f2b29ef8fb363a1121befa276d7e6251c8961b8819ac2d60a5ec2006f126c97
+)
 
 
 
@@ -483,8 +483,8 @@ package_regolith-styles () {
     pkgdesc="Regolith's themes for i3, gdm, gtk, rofi, plymouth, etc."
     license=('custom: GPLv3')
     depends=("regolith-i3" "gtk3" "ttf-iosevka-nerd" "ttf-jetbrains-mono" "adwaita-icon-theme" "otf-fira-mono" "ttf-ubuntu-font-family" "arc-icon-theme" "python-appdirs")
-    conflicts=("paper-icon-theme" "qogir-icon-theme" "moka-icon-theme-git" "nordic-theme-git" "gtk-theme-solarc-git" "gtk-theme-plano" "gtk-theme-plano-git")
-    provides=("paper-icon-theme" "regolith-styles" "regolith-look" "gtk-theme-solarc" "gtk-theme-plano")
+    conflicts=("ayu-theme" "paper-icon-theme" "qogir-icon-theme" "moka-icon-theme-git" "nordic-theme-git" "gtk-theme-solarc-git" "gtk-theme-plano" "gtk-theme-plano-git")
+    provides=("ayu-theme" "paper-icon-theme" "regolith-styles" "regolith-look" "gtk-theme-solarc" "gtk-theme-plano")
     groups=('regolith-de')
 
     extract_deb "${srcdir}"/ayu-theme_0.2.2-1_amd64.deb
