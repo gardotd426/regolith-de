@@ -75,4 +75,4 @@ Note: VMs generally don't play well with picom/compton compositing. If you are r
 Credit to Kevin Gilmer @kgilmer for the creation of Regolith Linux as well as invaluable insight during the creation of this PKGBUILD. 
 Pull requests are welcome, the number of packages here is enormous (it is a full desktop environment, after all), and this is my first software/package management project of any kind. 
 
-Credit also to Avinash Duduskar, for valuable contributions. 
+Credit also to [Avinash Duduskar](https://github.com/Strykar), for valuable contributions. 
