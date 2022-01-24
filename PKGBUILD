@@ -204,7 +204,7 @@ pkgdesc="Regolith's i3-gaps-based DE's underpinnings and gnome foundational depe
     license=('MIT')
     arch=('x86_64')
     depends=('i3-gaps' 'i3status' 'xorg-server' 'xcb-util-keysyms' 'xcb-util-wm'  'libev'
-             'yajl'  'startup-notification'  'pango'  'perl' 'xorg-server' 'xrdb'
+             'yajl'  'startup-notification'  'pango'  'perl' 'xorg-server' 'xorg-xrdb'
              'xcb-util-xrm'  'libxkbcommon-x11' 'python-i3ipc' 'gnome-flashback' 
              'accountsservice' 'cups-pk-helper' 'libgtop' 'gnome-control-center' 'gnome-desktop' 
 	     'xorg-xwininfo' 'dbus' 'python-gobject' 'python-dbus' 'xorg-xprop' 'libev' 'pcre'
