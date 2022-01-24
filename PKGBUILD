@@ -285,7 +285,7 @@ package_i3xrocks-cpu-usage () {
     pkgdesc="CPU usage blocklet for i3xrocks"
     license=('GPLv3')
     arch=('x86_64')
-    depends=('glibc' 'accountsservice' 'bc' 'ttf-font-awesome')
+    depends=('glibc' 'accountsservice' 'bc' 'ttf-font-awesome' 'sysstat')
     conflicts=()
     provides=('i3xrocks-cpu-usage')
     groups=('regolith-de')
