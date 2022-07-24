@@ -1,5 +1,7 @@
 # regolith-de
 
+NOTE ON REGOLITH 2.0: Yes, I know Regolith 2.0 has been released. I've been working on converting the PKGBUILD over to 2.0, but 2.0 basically completely changes the way Regolith works from the ground up on a fundamental level, and many of the packages in 1.6 are gone, there are many new packages that replace them, and most of them are custom-built by Ken (the Regolith creator) himself. I'm going to have to rewrite a couple patches and completely rewrite the PKGBUILD. I'm about 40% done as of July 01 2022. I'll get it done as soon as I can. 
+
 ![Screenshot](regolith1.png)
 
 Standalone Regolith desktop environment for Arch Linux
