@@ -28,7 +28,7 @@ pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-
         regolith-desktop-config
 	remontoire-regolith)
 pkgver=1.6
-pkgrel=11
+pkgrel=13
 arch=('x86_64')
 url=https://github.com/regolith-linux/regolith-desktop
 url2=https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files
@@ -43,7 +43,7 @@ source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-t
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/c/cahuella/cahuella_1.0.3-1_amd64.deb
         "${url2}"/i3-snapshot_1.0.1-2hirsute_amd64.deb
 	git+https://github.com/regolith-linux/i3xrocks.git
-        git+https://github.com/regolith-linux/regolith-i3xrocks-config
+        git+https://github.com/regolith-linux/regolith-i3xrocks-config#branch=v1_6
 	http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/m/moka-icon-theme/moka-icon-theme_5.4.523-201905300105~daily~ubuntu19.04.1_all.deb
         "${url2}"/nordic_1.6.5-1ubuntu1ppa1_all.deb
 	"${url2}"/paper-icon-theme_1.5.723-201905252133~daily~ubuntu19.04.1_all.deb
@@ -209,7 +209,7 @@ pkgdesc="Regolith's i3-gaps-based DE's underpinnings and gnome foundational depe
              'accountsservice' 'cups-pk-helper' 'libgtop' 'gnome-control-center' 'gnome-desktop' 
 	     'xorg-xwininfo' 'dbus' 'python-gobject' 'python-dbus' 'xorg-xprop' 'libev' 'pcre'
 	     'libconfig' 'xcb-util-image' 'xcb-util-renderutil' 'libsigc++' 'gnome-session'
-             'gnome-settings-daemon' 'playerctl' 'jsoncpp')
+             'gnome-settings-daemon' 'playerctl' 'jsoncpp' 'gnome-shell' 'mutter')
     optdepends=('picom: For compositing/desktop effects - strongly recommended!'
 		'unclutter-xfixes-git: For unclutter'
 		'lightdm: Display Manager - Regolith LightDM theme included in regolith-desktop-config' )
