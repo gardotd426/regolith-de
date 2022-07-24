@@ -9,15 +9,21 @@ pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-
         regolith-i3xrocks # allll the i3xrocks shit
 	i3xrocks-app-launcher
 	i3xrocks-battery
+	i3xrocks-bluetooth
 	i3xrocks-cpu-usage
+	i3xrocks-disk-capacity
 	i3xrocks-focused-window-name
 	i3xrocks-info
+	i3xrocks-keyboard-layout
 	i3xrocks-key-indicator
 	i3xrocks-media-player
 	i3xrocks-memory
+	#i3xrocks-microphone
 	i3xrocks-net-traffic
+	#i3xrocks-next-workspace
 	i3xrocks-nm-vpn
 	i3xrocks-openvpn
+	#i3xrocks-rofication
 	i3xrocks-temp
 	i3xrocks-time
 	i3xrocks-volume
@@ -42,8 +48,8 @@ makedepends=('wget' 'fakeroot' 'binutils' 'patch' 'python' 'meson' 'ninja' 'gtk3
 source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-theme/ayu-theme_0.2.2-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/c/cahuella/cahuella_1.0.3-1_amd64.deb
         "${url2}"/i3-snapshot_1.0.1-2hirsute_amd64.deb
-	git+https://github.com/regolith-linux/i3xrocks.git
-        git+https://github.com/regolith-linux/regolith-i3xrocks-config
+	git+https://github.com/regolith-linux/i3xrocks.git#commit=0c39c518e5e0909268865d5b0d77c1fb9bf74d22
+        git+https://github.com/regolith-linux/regolith-i3xrocks-config#tag=2_0
 	http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/m/moka-icon-theme/moka-icon-theme_5.4.523-201905300105~daily~ubuntu19.04.1_all.deb
         "${url2}"/nordic_1.6.5-1ubuntu1ppa1_all.deb
 	"${url2}"/paper-icon-theme_1.5.723-201905252133~daily~ubuntu19.04.1_all.deb
@@ -76,7 +82,7 @@ source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-t
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/u/ubiquity-slideshow-regolith/ubiquity-slideshow-regolith_168.6-regolith1_all.deb
         "${url2}"/xrescat_1.2.1-1_amd64.deb
         flashback.patch
-	git+https://github.com/regolith-linux/regolith-rofication.git
+	git+https://github.com/regolith-linux/regolith-rofication.git#tag=r2_0
 	http://launchpad.net/\~regolith-linux/+archive/ubuntu/release/+files/midnight-gtk-theme_1.1.0-1_all.deb
 	http://launchpad.net/\~regolith-linux/+archive/ubuntu/release/+files/regolith-look-solarized-light_2.9.7-1_amd64.deb
 	https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files/regolith-look-midnight_2.9.7-1_amd64.deb
@@ -87,7 +93,7 @@ source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-t
 	http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/g/gruvbox-gtk/gruvbox-gtk_1.0.1-1_amd64.deb
         http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/d/dracula-gtk/dracula-gtk_1.0.1-1_amd64.deb
 	http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/p/pop-gtk-theme/pop-gtk-theme_4.1.4\~1560290633\~18.04\~f75e86a_all.deb
-        git+https://github.com/regolith-linux/remontoire.git
+        git+https://github.com/regolith-linux/remontoire#tag=r2_0
 	rofitheme.patch
 	midnight-rofi.patch
 	rofication.patch
@@ -260,10 +266,9 @@ package_i3xrocks-app-launcher () {
 
 
 
-    move_script "${srcdir}"/regolith-i3xrocks-config/scripts/app-launcher app-launcher
-    move_conf "${srcdir}"/regolith-i3xrocks-config/conf.d/10_app-launcher 10_app-launcher
+#    move_script "${srcdir}"/regolith-i3xrocks-config/scripts/app-launcher app-launcher
+    move_conf "${srcdir}"/regolith-i3xrocks-config/conf.d/10_app-launcher 20_app-launcher
 
-#    extract_deb "${srcdir}"/i3xrocks-app-launcher_3.6.4-1_amd64.deb
 #    move_copyright
 }
 
@@ -280,6 +285,35 @@ package_i3xrocks-battery () {
     move_script "${srcdir}"/regolith-i3xrocks-config/scripts/battery battery
     move_conf "${srcdir}"/regolith-i3xrocks-config/conf.d/80_battery 80_battery
 }
+
+
+package_i3xrocks-bluetooth () {
+    pkgdesc="Bluetooth blocklet for i3xrocks"
+    license=('GPLv3')
+    arch=('x86_64')
+    depends=('python' 'python-dbus' 'bluez')
+    conflicts=()
+    provides=('i3xrocks-bluetooth')
+    groups=('regolith-de')
+
+    move_script "${srcdir}"/regolith-i3xrocks-config/scripts/bluetooth bluetooth
+    move_conf "${srcdir}"/regolith-i3xrocks-config/conf.d/30_bluetooth 30_bluetooh
+}
+
+
+package_i3xrocks-disk-capacity () {
+    pkgdesc="Disk-capacity blocklet for i3xrocks"
+    license=('GPLv3')
+    arch=('x86_64')
+    depends=('coreutils')
+    conflicts=()
+    provides=('i3xrocks-disk-capacity')
+    groups=('regolith-de')
+
+    move_script "${srcdir}"/regolith-i3xrocks-config/scripts/disk-capacity disk-capacity
+    move_conf "${srcdir}"/regolith-i3xrocks-config/conf.d/50_disk-capacity 50_disk-capacity
+}
+
 
 
 package_i3xrocks-cpu-usage () {
@@ -316,7 +350,7 @@ package_i3xrocks-info () {
     arch=('x86_64')
     depends=('glibc' 'remontoire' 'accountsservice' 'bc' 'ttf-font-awesome')
     conflicts=()
-    provides=('i3xrocks-info')
+	    provides=('i3xrocks-info')
     groups=('regolith-de')
 
     move_conf "${srcdir}"/regolith-i3xrocks-config/conf.d/20_info 20_info
@@ -361,6 +395,20 @@ package_i3xrocks-memory () {
     groups=('regolith-de')
 
     move_script "${srcdir}"/regolith-i3xrocks-config/scripts/memory memory
+    move_conf "${srcdir}"/regolith-i3xrocks-config/conf.d/50_memory 50_memory
+}
+
+
+package_i3xrocks-microphone () {
+    pkgdesc="Microphone blocklet for i3xrocks"
+    license=('GPLv3')
+    arch=('x86_64')
+    depends=('regolith-i3xrocks' 'alsa-utils')
+    conflicts=()
+    provides=('i3xrocks-memory')
+    groups=('regolith-de')
+
+    move_script "${srcdir}"/regolith-i3xrocks-config/scripts/microphone microphone
     move_conf "${srcdir}"/regolith-i3xrocks-config/conf.d/50_memory 50_memory
 }
 

@@ -13,14 +13,15 @@
  ROFICATION_VERSION = '1.2.2'
 +ROFICATION_THEME = user_config_dir(appname)
 \ No newline at end of file
---- a/rofication/_gui.py	2021-11-04 06:37:39.743263711 -0400
-+++ b/rofication/_gui.py	2021-11-04 06:35:12.916912359 -0400
+--- a/rofication/_gui.py	2022-06-10 06:49:35.827280671 -0400
++++ b/rofication/_gui.py	2022-06-10 06:53:28.105737363 -0400
 @@ -2,6 +2,8 @@
  import struct
  import subprocess
  from typing import Iterable, List
 +from appdirs import *
 +from ._metadata import ROFICATION_THEME
+ from datetime import datetime
  
  from gi.repository import GLib
  
