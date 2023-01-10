@@ -1,11 +1,10 @@
 # Author: Matt McDonald <gardotd426@gmail.com>
-# Contributor: Kevin Gilmer
-# Contributor: Avinash Duduskar <strykar@hotmail.com>
+# Contributor (as the creator of Regolith Linux and Regolith DE): Kevin Gilmer
 # Maintainer: Matt McDonald <gardotd426@gmail.com>
 
 
 pkgbase=regolith-de
-pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-gaps-wm-dbg i3-snapshot i3xrocks gnome-flashback ubiquity-slideshow-regolith)
+pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-snapshot i3xrocks gnome-flashback ubiquity-slideshow-regolith)
         regolith-i3xrocks # allll the i3xrocks shit
 	i3xrocks-app-launcher
 	i3xrocks-battery
@@ -33,8 +32,8 @@ pkgname=(regolith-i3 # (regolith-i3-gaps regolith-i3-gaps-session i3-gaps-wm i3-
         regolith-st 
         regolith-desktop-config
 	remontoire-regolith)
-pkgver=1.6
-pkgrel=7
+pkgver=2.0
+pkgrel=1
 arch=('x86_64')
 url=https://github.com/regolith-linux/regolith-desktop
 url2=https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+files
@@ -210,7 +209,7 @@ package_regolith-i3 () {
 pkgdesc="Regolith's i3-gaps-based DE's underpinnings and gnome foundational dependencies"
     license=('MIT')
     arch=('x86_64')
-    depends=('i3-gaps' 'i3status' 'xorg-server' 'xcb-util-keysyms' 'xcb-util-wm'  'libev'
+    depends=('i3' 'i3status' 'xorg-server' 'xcb-util-keysyms' 'xcb-util-wm'  'libev'
              'yajl'  'startup-notification'  'pango'  'perl' 'xorg-server'
              'xcb-util-xrm'  'libxkbcommon-x11' 'python-i3ipc' 'gnome-flashback' 
              'accountsservice' 'cups-pk-helper' 'libgtop' 'gnome-control-center' 'gnome-desktop' 
@@ -583,7 +582,7 @@ package_regolith-desktop-config () {
     depends=('rofi' 'adobe-source-code-pro-fonts')
     optdepends=('lightdm: For the Regolith LightDM customization' 
 		'regolith-i3xrocks: For i3xrocks (i3blocks) support'
-	        'i3-gaps: For i3-gaps config support'
+	        'i3: For i3-gaps config support - as of 4.22-2, i3-gaps is dead and i3-wm replaces it'
 		'picom: For compositing configuration')
     groups=('regolith-de')
 
