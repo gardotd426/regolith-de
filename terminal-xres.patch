@@ -1,0 +1,14 @@
+diff --git a/config b/config
+index 0bf546d..62daad2 100644
+--- a/config
++++ b/config
+@@ -48,7 +48,8 @@ set_from_resource $alt  i3-wm.alt Mod1
+ 
+ ## Launch // Terminal // <> Enter ##
+ set_from_resource $i3-wm.binding.terminal i3-wm.binding.terminal Return
+-bindsym $mod+$i3-wm.binding.terminal exec /usr/bin/x-terminal-emulator
++set_from_resource $i3-wm.terminal.binary i3-wm.terminal.binary /usr/bin/st
++bindsym $mod+$i3-wm.binding.terminal exec $i3-wm.terminal.binary
+ 
+ ## Launch // Browser // <><Shift> Enter ##
+ set_from_resource $i3-wm.binding.browser i3-wm.binding.browser Shift+Return

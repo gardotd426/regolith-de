@@ -91,7 +91,8 @@ source=(http://ppa.launchpad.net/regolith-linux/release/ubuntu/pool/main/a/ayu-t
 	rofitheme.patch
 	midnight-rofi.patch
 	rofication.patch
-	regolith-look.patch)
+	regolith-look.patch
+	terminal-xres.patch)
 
 
 sha256sums=('6e8c3d2dbe8c192c40593c85c9c5f2f6fb29ea376e72770461b41b867a2dd996'
@@ -146,7 +147,8 @@ sha256sums=('6e8c3d2dbe8c192c40593c85c9c5f2f6fb29ea376e72770461b41b867a2dd996'
             'a851555a8af437bb3e3219a638f1b77c6d1b259b11f2d11a7cd82d9440d81fda'
             '705c95cdfd5847cd6c7fafe123cbdc6c3f404407118967797210189157c52e5c'
             'ffc32c177754990e7f5f7126415bd8f2d210dd875ad5ae43b057299a7d395905'
-            '5f2b29ef8fb363a1121befa276d7e6251c8961b8819ac2d60a5ec2006f126c97')
+            '5f2b29ef8fb363a1121befa276d7e6251c8961b8819ac2d60a5ec2006f126c97'
+            'bb399da1b1391fdd99997489759ff447d44397bac293b63c06dbe1fe588ea4f4')
 
 
 PKGEXT='.pkg.tar.zst'
@@ -554,8 +556,8 @@ package_regolith-desktop-config () {
 #    rm "${pkgdir}"/usr/share/applications/reboot.desktop
 #    rm "${pkgdir}"/usr/share/applications/logout.desktop
 #    rm "${pkgdir}"/usr/share/applications/shutdown.desktop
-    sed -i 's/x-terminal-emulator/st/g' "${pkgdir}"/etc/regolith/i3/config
     cd "${pkgdir}"
+    patch "${pkgdir}"/etc/regolith/i3/config -i "${srcdir}"/terminal-xres.patch
     patch -Np1 -i "${srcdir}"/rofitheme.patch
     cd "${srcdir}"/regolith-rofication
     patch -Np1 -i "${srcdir}"/rofication.patch
